@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="./page//Home/styleHome.css">
+
+        
 </head>
 
 <body>
@@ -17,11 +21,9 @@
             <span>Henry Rooney</span>
             <span>Creative Designer</span>
             <img src="./profile_left_content.jpg" alt="Profile Picture">
-
             <div class="info">
                 <ul>
                     <li class="icon"> <i class="fa-solid fa-glasses"></i></li>
-
                     <li class="text-lili"><strong>Name</strong>: Chris Johnson</li>
                     <li><strong>Birthday</strong>: 06 December 1987</li>
                     <li><strong>Job</strong>: Freelancer</li>
@@ -29,21 +31,44 @@
                     <li><strong>Skype</strong>: henryrooney85</li>
                 </ul>
             </div>
-
-
-
-
             <div class="download-cv">
-                <button>Download Cv <i class="fa-solid fa-download"></i></button>
-
+                <button><strong>Download Cv</strong> <i class="fa-solid fa-download"></i></button>
             </div>
 
         </aside>
 
         <div class="main-content">
+
+
+
             <div class="content-section top">
+                <ul class="nav-menu">
+                    <li data-page="./page/Home/home.html"><i class="fa-solid fa-house"></i></li>
+                    <li data-page="./page/resume/resume.html">RESUME</li>
+                    <li data-page="./page/Portfolio/portfolio.html">PORTFOLIO</li>
+                    <li data-page="./page/Blog/blog.html">BLOG</li>
+                    <li data-page="./page/Contact/contact.html">CONTACT</li>
+                </ul>
+
+                <ul>
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-solid fa-basketball"></i></li>
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li>
+                        <button>Hire Me <i class="fa-solid fa-paper-plane"></i></button>
+                    </li>
+
+                </ul>
 
             </div>
+
+
+
+
+
+
             <div class="content-section middle">
 
             </div>
@@ -53,6 +78,37 @@
             </div>
         </div>
     </div>
+
+
+
+    <script>
+        const navItems = document.querySelectorAll(".nav-menu li");
+        const contentMiddle = document.querySelector(".content-section.middle");
+
+        navItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const page = item.getAttribute("data-page");
+
+                fetch(page)
+                    .then(response => response.text())
+                    .then(data => {
+                        contentMiddle.innerHTML = data;
+                    })
+                    .catch(error => {
+                        contentMiddle.innerHTML = "<p>Error loading content.</p>";
+                        console.error(error);
+                    });
+            });
+        });
+
+        // home page load default
+        window.addEventListener("DOMContentLoaded", () => {
+            fetch("./page/Home/home.html")
+                .then(res => res.text())
+                .then(data => contentMiddle.innerHTML = data);
+        });
+    </script>
+
 </body>
 
 </html>
