@@ -1,0 +1,48 @@
+   body {
+       background: #fafafa url('./body_backgroud.png');
+       font-family: Roboto, sans-serif;
+       position: relative;
+       overflow-x: hidden;
+       margin: 5%;
+   }
+
+   .container {
+       display: flex;
+       min-height: 100vh;
+   }
+
+   .sidebar {
+       width: 300px;
+       background-color: #FFFFFF;
+       padding: 20px;
+       border: 1px solid red;
+   }
+
+   .main-content {
+
+       flex: 1;
+       display: flex;
+       flex-direction: column;
+       padding: 20px;
+       gap: 20px;
+   }
+
+   .content-section {
+       border: 1px solid red;
+       padding: 20px;
+       background-color: #FFFFFF;
+
+   }
+
+   .content-section.top {
+       height: 100px;
+   }
+
+   .content-section.middle {
+       flex: 1;
+       min-height: 300px;
+   }
+
+   .content-section.bottom {
+       height: 100px;
+   }
