@@ -1,0 +1,19 @@
+/* custom overrides for contact form */
+.middle-itme-page.contact .form-control {
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+}
+.middle-itme-page.contact .form-control:focus {
+  box-shadow: none;
+  border-color: #ccc;
+}
+.middle-itme-page.contact .btn-light {
+  background-color: #f1f1f1 !important;
+  border: none;
+}
+.middle-itme-page.contact .btn-light:hover {
+  background-color: #e2e2e2 !important;
+}
+.middle-itme-page.contact .list-inline-item a {
+  font-size: 1rem;
+}

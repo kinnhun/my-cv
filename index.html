@@ -2,108 +2,559 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My CV - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLead Training Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./styles/stylesSidebar.css" rel="stylesheet">
+    <link href="./styles/stylesSectionTop.css" rel="stylesheet">
+    <link href="./styles/styleHome.css" rel="stylesheet">
+    <link href="./styles/styleResum.css" rel="stylesheet">
+    <link href="./styles/stylePortfolio.css" rel="stylesheet">
+    <link href="./styles/styleBlog.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./page/Home/styleHome.css" />
-  <link rel="stylesheet" href="./page/Resume/stylesResume.css" />
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <span>Henry Rooney</span>
-      <span>Creative Designer</span>
-      <img src="./profile_left_content.jpg" alt="Profile Picture" />
-      <div class="info">
-        <ul>
-          <li class="icon"><i class="fa-solid fa-glasses"></i></li>
-          <li class="text-lili"><strong>Name</strong>: Chris Johnson</li>
-          <li><strong>Birthday</strong>: 06 December 1987</li>
-          <li><strong>Job</strong>: Freelancer</li>
-          <li><strong>Email</strong>: henry@domain.com</li>
-          <li><strong>Skype</strong>: henryrooney85</li>
-        </ul>
-      </div>
-      <div class="download-cv">
-        <button><strong>Download Cv</strong> <i class="fa-solid fa-download"></i></button>
-      </div>
-    </aside>
+    <div class="container wrapper">
+        <div class="row row-fullh">
+            <!-- Sidebar/Profile -->
+            <aside class="col-lg-3 col-md-4">
+                <div class="profile">
+                    <div class="text-start profile-sidebar">
+                        <div class="name">Henry Rooney</div>
+                        <div class="job">Creative Designer</div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="./img/indexImg/profile_left_content.jpg" alt="Profile Picture">
+                        <div class="icon-overlay">
+                            <i class="fa-solid fa-glasses"></i>
+                        </div>
+                    </div>
+                    <ul class="timeline profile-sidebar">
+                        <li><strong>Name</strong>: Chris Johnson</li>
+                        <li><strong>Birthday</strong>: 06 December 1987</li>
+                        <li><strong>Job</strong>: Freelancer</li>
+                        <li><strong>Email</strong>: henry@domain.com</li>
+                        <li><strong>Skype</strong>: henryrooney85</li>
+                    </ul>
+                    <div class="download-cv text-center profile-sidebar">
+                        <button class="btn"><strong>Download Cv</strong> <i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+            </aside>
+            <!-- Main Content -->
+            <main id="main-container" class="col-lg-9 col-md-8 main-container">
+                <div class="content-section top">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a class="nav-link" href="#home"><i class="fa fa-home"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <ul class="social-list mb-0">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-basketball-ball"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                            </li>
+                        </ul>
+                        <button class="hire-btn">Hire Me <i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
 
-    <div class="main-content">
-      <div class="content-section top">
-        <ul class="nav-menu">
-          <li data-page="./page/Home/home.html"><i class="fa-solid fa-house"></i></li>
-          <li data-page="./page/Resume/resume.html">RESUME</li>
-          <li data-page="./page/Portfolio/portfolio.html">PORTFOLIO</li>
-          <li data-page="./page/Blog/blog.html">BLOG</li>
-          <li data-page="./page/Contact/contact.html">CONTACT</li>
-        </ul>
 
-        <ul>
-          <li><i class="fa-brands fa-facebook-f"></i></li>
-          <li><i class="fa-brands fa-twitter"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-solid fa-basketball"></i></li>
-          <li><i class="fa-solid fa-bars"></i></li>
-          <li>
-            <button>Hire Me <i class="fa-solid fa-paper-plane"></i></button>
-          </li>
-        </ul>
-      </div>
 
-      <div class="content-section middle"></div>
-      <div class="content-section bottom"></div>
+
+
+                <div class="content-section middle">
+
+
+                    <div class="middle-itme-page home">
+
+                        <div class="about-section">
+                            <h2>About Me</h2>
+                            <p>
+                                Started earnest brother believe an exposed so. Me he believing daughters if forfeited at
+                                furniture. Age
+                                again and stuff downs spoke. Late hour new nay able fat each sell. Nor themselves age
+                                introduced frequently
+                                use unsatiable devonshire get. They why quit gay cold rose deal park. One same they four
+                                did ask busy.
+                                Reserved opinions fat him nay position. Breakfast as zealously incommode do agreeable
+                                furniture. One too nay
+                                led fanny allow plate.
+                            </p>
+                            <p>
+                                Quick six blind smart out burst. Perfectly on furniture dejection determine my depending
+                                an to. Add short
+                                water court fat. Her bachelor honoured perceive securing but desirous ham required.
+                                Questions deficient
+                                acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye
+                                country on observe.
+                                She continue appetite endeavor she judgment interest the met. For she surrounded
+                                motionless fat resolution
+                                may. </p>
+                        </div>
+
+                        <div class="services-section">
+                            <h2>My Services</h2>
+                            <div class="services-grid">
+                                <div class="service-box">
+                                    <img src="./imageIcon/code.png" alt="Web Development">
+                                    <p>
+                                        <strong>Web Development</strong><br>
+                                        <span>I have been working on web design for 10 years.</span>
+                                    </p>
+                                </div>
+                                <div class="service-box">
+                                    <img src="./imageIcon/note.png" alt="Branding Identity">
+                                    <p>
+                                        <strong>Branding Identity</strong><br>
+                                        <span>We will make you a brand that is catchy and leaves a trace.</span>
+                                    </p>
+                                </div>
+                                <div class="service-box">
+                                    <img src="./imageIcon/pen.png" alt="Illustrator">
+                                    <p>
+                                        <strong>Illustrator</strong><br>
+                                        <span>I have been working on illustration design for 6 years.</span>
+                                    </p>
+                                </div>
+                                <div class="service-box">
+                                    <img src="./imageIcon/calender.png" alt="Fast Delivery">
+                                    <p>
+                                        <strong>Fast Delivery</strong><br>
+                                        <span>I deliver your business as fast as possible.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="skills-section">
+                            <div class="skills-group">
+                                <h3>Design Skills</h3>
+                                <ul>
+                                    <li>
+                                        <span>Photoshop</span>
+                                        <div class="underline" style="--percent: 70%"></div>
+                                    </li>
+                                    <li>
+                                        <span>Sketch</span>
+                                        <div class="underline" style="--percent: 50%"></div>
+                                    </li>
+                                    <li>
+                                        <span>Adobe Xd</span>
+                                        <div class="underline" style="--percent: 30%"></div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="skills-group">
+                                <h3>Code Skills</h3>
+                                <ul>
+                                    <li>
+                                        <span>Javascript</span>
+                                        <div class="underline" style="--percent: 70%"></div>
+                                    </li>
+                                    <li>
+                                        <span>HTML5</span>
+                                        <div class="underline" style="--percent: 60%"></div>
+                                    </li>
+                                    <li>
+                                        <span>CSS3</span>
+                                        <div class="underline" style="--percent: 40%"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="middle-itme-page resume">
+
+                        <div class="resum">
+
+
+                            <div class="resume-section">
+                                <h2>Resume</h2>
+                                <div class="resume-columns">
+                                    <!-- Working History -->
+                                    <div class="resume-column">
+                                        <h3><i class="fa-solid fa-briefcase"></i> Working History</h3>
+                                        <ul class="timeline">
+                                            <li>
+                                                <h4>Art Director - Facebook Inc</h4>
+                                                <span class="date">2010 - Present</span>
+                                                <p>
+                                                    Expenses as material breeding insisted building to in. Continual so
+                                                    distrusts pronounce by unwilling
+                                                    listening. Thing do taste on we manor.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h4>Senior Designer - Google</h4>
+                                                <span class="date">2008 - 2010</span>
+                                                <p>
+                                                    So insisted received is occasion advanced honoured. Among ready to
+                                                    which up. Attacks smiling and may out
+                                                    assured moments man nothing outward.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h4>Junior Designer - Creative Shake</h4>
+                                                <span class="date">2005 - 2008</span>
+                                                <p>
+                                                    Excited him now natural saw passage offices you minuter. At by asked
+                                                    being court hopes. Farther so
+                                                    friends am to detract.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Education History -->
+                                    <div class="resume-column">
+                                        <h3><i class="fa-solid fa-graduation-cap"></i> Education History</h3>
+                                        <ul class="timeline">
+                                            <li>
+                                                <h4>Abc University of Los Angeles</h4>
+                                                <span class="date">2004 - 2009</span>
+                                                <p>
+                                                    Expenses as material breeding insisted building to in. Continual so
+                                                    distrusts pronounce by unwilling
+                                                    listening. Thing do taste on we manor.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h4>Drawing Course</h4>
+                                                <span class="date">2003 - 2004</span>
+                                                <p>
+                                                    So insisted received is occasion advanced honoured. Among ready to
+                                                    which up. Attacks smiling and may out
+                                                    assured moments man nothing outward.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h4>Abc High School</h4>
+                                                <span class="date">2000 - 2003</span>
+                                                <p>
+                                                    Excited him now natural saw passage offices you minuter. At by asked
+                                                    being court hopes. Farther so
+                                                    friends am to detract.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="clients-section">
+                                <h3>Clients</h3>
+                                <div class="clients-grid">
+                                    <div class="client-box">
+                                        <img src="./img/imgResum/paymo.jpg" alt="Paymo">
+                                    </div>
+                                    <div class="client-box">
+                                        <img src="./img/imgResum/envato.jpg" alt="Envato">
+                                    </div>
+                                    <div class="client-box">
+                                        <img src="./img/imgResum/conneqt.jpg" alt="Conneqt">
+                                    </div>
+                                    <div class="client-box">
+                                        <img src="./img/imgResum/tijdwinst.jpg" alt="Tijdwinst">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="testimonial-section">
+                                <h2>Testimonials</h2>
+                                <div class="slider-container" id="sliderContainer">
+                                    <div class="slider-track" id="track">
+                                        <div class="testimonial-card">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+
+                                        <div class="testimonial-card">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-dots" id="sliderDots"></div>
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="middle-itme-page portfolio">
+
+
+                        <h1>Portfolio</h1>
+                        <div id="filterButtons"></div>
+                        <div id="portfolioGrid"></div>
+                        <button id="loadMoreBtn">Load More</button>
+
+                        <!-- Popup -->
+                        <div id="popupOverlay">
+                            <div class="popup-content">
+                                <button class="popup-close" onclick="closePopup()">&times;</button>
+                                <div id="popupMedia"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div class="middle-itme-page blog">
+
+
+                        <div class="blog-container">
+                            <h2>Blog Posts</h2>
+                            <div class="blog-grid" id="blogGrid"></div>
+                            <button class="load-more" id="loadMore">Load More</button>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+                    <div class="middle-itme-page contact">
+
+
+                        <!-- CONTACT SECTION -->
+                        <div class="middle-itme-page contact py-5">
+                            <div class="container">
+                                <div class="row gx-5">
+                                    <!-- Left: Form -->
+                                    <div class="col-md-6 mb-4">
+                                        <h5 class="mb-4"><strong>Contact Form</strong></h5>
+                                        <form>
+                                            <div class="row g-3">
+                                                <div class="col-6">
+                                                    <input type="text"
+                                                        class="form-control border-0 border-bottom rounded-0"
+                                                        placeholder="Name">
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="email"
+                                                        class="form-control border-0 border-bottom rounded-0"
+                                                        placeholder="E-mail">
+                                                </div>
+                                            </div>
+                                            <div class="mt-4">
+                                                <textarea class="form-control border-0 border-bottom rounded-0" rows="4"
+                                                    placeholder="Message"></textarea>
+                                            </div>
+                                            <button type="submit"
+                                                class="btn btn-light text-dark mt-4 rounded-pill px-4">Submit</button>
+                                        </form>
+                                    </div>
+                                    <!-- Right: Contact Info -->
+                                    <div class="col-md-6 mb-4">
+                                        <h5 class="mb-4"><strong>Contact Informations</strong></h5>
+                                        <ul class="list-unstyled mb-4">
+                                            <li><strong>Address:</strong> 107727 Santa Monica Boulevard Los Angeles</li>
+                                            <li><strong>Phone:</strong> +38 012-3456-7890</li>
+                                            <li><strong>Job:</strong> Freelancer</li>
+                                            <li><strong>E-mail:</strong> chris@domain.com</li>
+                                            <li><strong>Skype:</strong> chrisjohnson85</li>
+                                        </ul>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item me-3"><a href="#" class="text-dark"><i
+                                                        class="fab fa-facebook-f"></i></a></li>
+                                            <li class="list-inline-item me-3"><a href="#" class="text-dark"><i
+                                                        class="fab fa-twitter"></i></a></li>
+                                            <li class="list-inline-item me-3"><a href="#" class="text-dark"><i
+                                                        class="fab fa-instagram"></i></a></li>
+                                            <li class="list-inline-item"><a href="#" class="text-dark"><i
+                                                        class="fab fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Map -->
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="mb-3"><strong>Contact Map.</strong></h5>
+                                        <div class="ratio ratio-16x9 shadow-sm rounded">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24396.455763004884!2d-115.13108354428735!3d36.18912977254862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+California!5e0!3m2!1sen!2sus!4v1509525039851"
+                                                style="border:0;" allowfullscreen="" loading="lazy"
+                                                referrerpolicy="no-referrer-when-downgrade">
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="content-section bottom"></div>
+
+
+            </main>
+
+
+
+        </div>
     </div>
-  </div>
+    <!-- Bootstrap JS & dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    const navItems = document.querySelectorAll(".nav-menu li");
-    const contentMiddle = document.querySelector(".content-section.middle");
-
-    function loadPage(pageUrl) {
-      fetch(pageUrl)
-        .then(response => response.text())
-        .then(html => {
-          contentMiddle.innerHTML = html;
-
-          // Thực thi các script bên trong contentMiddle (nếu có)
-          const scripts = contentMiddle.querySelectorAll("script");
-          scripts.forEach(oldScript => {
-            const newScript = document.createElement("script");
-            if (oldScript.src) {
-              newScript.src = oldScript.src;
-              newScript.async = false;
-            } else {
-              newScript.textContent = oldScript.textContent;
-            }
-            document.body.appendChild(newScript);
-          });
-        })
-        .catch(error => {
-          contentMiddle.innerHTML = "<p>Error loading content.</p>";
-          console.error("Load page error:", error);
-        });
-    }
-
-    navItems.forEach(item => {
-      item.addEventListener("click", () => {
-        const page = item.getAttribute("data-page");
-        if (page) loadPage(page);
-      });
-    });
-
-    // Load trang home mặc định
-    window.addEventListener("DOMContentLoaded", () => {
-      loadPage("./page/Home/home.html");
-    });
-  </script>
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+    <!-- load dataBlog.js trước -->
+    <script type="module" src="./js/dataBlog.js"></script>
+    <!-- rồi script blog mới -->
+    <script type="module" src="./js/blog.js"></script>
 
 </body>
 

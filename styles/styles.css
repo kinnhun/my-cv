@@ -1,0 +1,9 @@
+.middle-itme-page.home,
+.middle-itme-page.resume,
+.middle-itme-page.portfolio,
+.middle-itme-page.blog,
+.middle-itme-page.contact {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
