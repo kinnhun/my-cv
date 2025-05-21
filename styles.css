@@ -172,6 +172,8 @@
        flex-direction: column;
        gap: 20px;
        margin-left: 20px;
+       max-width: 80%;
+       min-width: 80%;  
    }
 
    .content-section {
