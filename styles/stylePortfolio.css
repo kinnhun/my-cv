@@ -1,12 +1,4 @@
-    body {
-      font-family: 'Roboto', sans-serif;
-      padding: 40px;
-      background-color: #fafafa;
-    }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
+
     #filterButtons {
       display: flex;
       gap: 16px;
