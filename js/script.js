@@ -44,51 +44,159 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // resum 
 
+// const track = document.getElementById('track');
+// const container = document.getElementById('sliderContainer');
+// const cardWidth = container.offsetWidth / 3; // 3 cards visible
+// const totalCards = track.children.length;
+// const groupSize = 3;
+// const totalDots = Math.ceil(totalCards / groupSize);
+// let currentIndex = 0;
+
+// let startX = 0;
+// let currentTranslate = 0;
+// let prevTranslate = 0;
+// let dragging = false;
+
+// // Tạo dot: mỗi 3 card 1 dot
+// const dotsContainer = document.getElementById("sliderDots");
+// for (let i = 0; i < totalDots; i++) {
+//   const dot = document.createElement("span");
+//   dot.classList.add("dot");
+//   if (i === 0) dot.classList.add("active");
+//   dot.addEventListener("click", () => {
+//     currentIndex = i * groupSize;
+//     updateSlider();
+//     resetAutoSlide();
+//   });
+//   dotsContainer.appendChild(dot);
+// }
+
+// // Cập nhật vị trí slider + dot
+// function updateSlider() {
+//   currentTranslate = -currentIndex * cardWidth;
+//   track.style.transform = `translateX(${currentTranslate}px)`;
+//   prevTranslate = currentTranslate;
+
+//   const dots = document.querySelectorAll('.slider-dots .dot');
+//   dots.forEach(dot => dot.classList.remove('active'));
+
+//   const dotIndex = Math.floor(currentIndex / groupSize);
+//   if (dots[dotIndex]) {
+//     dots[dotIndex].classList.add('active');
+//   }
+// }
+
+// // Tự động trượt từng card
+// function slideNext() {
+//   currentIndex = (currentIndex + 1) % (totalCards - 3 + 1);
+//   updateSlider();
+// }
+
+// function resetAutoSlide() {
+//   clearInterval(autoSlide);
+//   autoSlide = setInterval(slideNext, 4000);
+// }
+
+// let autoSlide = setInterval(slideNext, 4000);
+
+// // Kéo chuột / cảm ứng
+// container.addEventListener("mousedown", startDrag);
+// container.addEventListener("touchstart", startDrag);
+// container.addEventListener("mouseup", endDrag);
+// container.addEventListener("mouseleave", endDrag);
+// container.addEventListener("touchend", endDrag);
+// container.addEventListener("mousemove", drag);
+// container.addEventListener("touchmove", drag);
+
+// function startDrag(e) {
+//   clearInterval(autoSlide);
+//   dragging = true;
+//   container.style.cursor = "grabbing";
+//   startX = getPositionX(e);
+// }
+
+// function endDrag() {
+//   if (!dragging) return;
+//   dragging = false;
+//   container.style.cursor = "grab";
+
+//   const movedBy = currentTranslate - prevTranslate;
+//   if (movedBy < -50 && currentIndex < totalCards - 3) currentIndex++;
+//   if (movedBy > 50 && currentIndex > 0) currentIndex--;
+
+//   updateSlider();
+//   resetAutoSlide();
+// }
+
+// function drag(e) {
+//   if (!dragging) return;
+//   const currentX = getPositionX(e);
+//   const deltaX = currentX - startX;
+//   currentTranslate = prevTranslate + deltaX;
+//   track.style.transform = `translateX(${currentTranslate}px)`;
+// }
+
+// function getPositionX(e) {
+//   return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+// }
+
+// updateSlider();
+
+
+
 const track = document.getElementById('track');
 const container = document.getElementById('sliderContainer');
-const cardWidth = container.offsetWidth / 3; // 3 cards visible
+const dotsContainer = document.getElementById("sliderDots");
 const totalCards = track.children.length;
-const groupSize = 3;
-const totalDots = Math.ceil(totalCards / groupSize);
-let currentIndex = 0;
 
+let groupSize = window.innerWidth <= 768 ? 1 : 3;
+let cardWidth = container.offsetWidth / groupSize;
+let currentIndex = 0;
+let autoSlide;
 let startX = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let dragging = false;
 
-// Tạo dot: mỗi 3 card 1 dot
-const dotsContainer = document.getElementById("sliderDots");
-for (let i = 0; i < totalDots; i++) {
-  const dot = document.createElement("span");
-  dot.classList.add("dot");
-  if (i === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => {
-    currentIndex = i * groupSize;
-    updateSlider();
-    resetAutoSlide();
-  });
-  dotsContainer.appendChild(dot);
+function updateGroupSize() {
+  groupSize = window.innerWidth <= 768 ? 1 : 3;
+  cardWidth = container.offsetWidth / groupSize;
 }
 
-// Cập nhật vị trí slider + dot
-function updateSlider() {
-  currentTranslate = -currentIndex * cardWidth;
-  track.style.transform = `translateX(${currentTranslate}px)`;
-  prevTranslate = currentTranslate;
-
-  const dots = document.querySelectorAll('.slider-dots .dot');
-  dots.forEach(dot => dot.classList.remove('active'));
-
-  const dotIndex = Math.floor(currentIndex / groupSize);
-  if (dots[dotIndex]) {
-    dots[dotIndex].classList.add('active');
+function createDots() {
+  dotsContainer.innerHTML = '';
+  const totalDots = Math.ceil(totalCards / groupSize);
+  for (let i = 0; i < totalDots; i++) {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      currentIndex = i * groupSize;
+      updateSlider();
+      resetAutoSlide();
+    });
+    dotsContainer.appendChild(dot);
   }
 }
 
-// Tự động trượt từng card
+function updateSlider() {
+  const maxIndex = totalCards - 1;
+  if (currentIndex > maxIndex) currentIndex = 0;
+  if (currentIndex < 0) currentIndex = 0;
+
+  currentTranslate = -currentIndex * cardWidth;
+  prevTranslate = currentTranslate;
+  track.style.transform = `translateX(${currentTranslate}px)`;
+
+  const dots = dotsContainer.querySelectorAll(".dot");
+  dots.forEach(dot => dot.classList.remove("active"));
+  const dotIndex = Math.floor(currentIndex / groupSize);
+  if (dots[dotIndex]) dots[dotIndex].classList.add("active");
+}
+
 function slideNext() {
-  currentIndex = (currentIndex + 1) % (totalCards - 3 + 1);
+  currentIndex++;
+  if (currentIndex > totalCards - 1) currentIndex = 0;
   updateSlider();
 }
 
@@ -97,35 +205,16 @@ function resetAutoSlide() {
   autoSlide = setInterval(slideNext, 4000);
 }
 
-let autoSlide = setInterval(slideNext, 4000);
-
-// Kéo chuột / cảm ứng
-container.addEventListener("mousedown", startDrag);
-container.addEventListener("touchstart", startDrag);
-container.addEventListener("mouseup", endDrag);
-container.addEventListener("mouseleave", endDrag);
-container.addEventListener("touchend", endDrag);
-container.addEventListener("mousemove", drag);
-container.addEventListener("touchmove", drag);
+// ==== Drag Events ====
+function getPositionX(e) {
+  return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+}
 
 function startDrag(e) {
   clearInterval(autoSlide);
   dragging = true;
-  container.style.cursor = "grabbing";
   startX = getPositionX(e);
-}
-
-function endDrag() {
-  if (!dragging) return;
-  dragging = false;
-  container.style.cursor = "grab";
-
-  const movedBy = currentTranslate - prevTranslate;
-  if (movedBy < -50 && currentIndex < totalCards - 3) currentIndex++;
-  if (movedBy > 50 && currentIndex > 0) currentIndex--;
-
-  updateSlider();
-  resetAutoSlide();
+  container.style.cursor = "grabbing";
 }
 
 function drag(e) {
@@ -136,11 +225,42 @@ function drag(e) {
   track.style.transform = `translateX(${currentTranslate}px)`;
 }
 
-function getPositionX(e) {
-  return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+function endDrag() {
+  if (!dragging) return;
+  dragging = false;
+  container.style.cursor = "grab";
+  const movedBy = currentTranslate - prevTranslate;
+
+  const threshold = cardWidth / 4;
+  if (movedBy < -threshold && currentIndex < totalCards - 1) currentIndex++;
+  else if (movedBy > threshold && currentIndex > 0) currentIndex--;
+
+  updateSlider();
+  resetAutoSlide();
 }
 
+// ==== Events ====
+container.addEventListener("mousedown", startDrag);
+container.addEventListener("touchstart", startDrag);
+container.addEventListener("mousemove", drag);
+container.addEventListener("touchmove", drag);
+container.addEventListener("mouseup", endDrag);
+container.addEventListener("mouseleave", endDrag);
+container.addEventListener("touchend", endDrag);
+
+window.addEventListener("resize", () => {
+  updateGroupSize();
+  createDots();
+  updateSlider();
+});
+
+// ==== Init ====
+updateGroupSize();
+createDots();
 updateSlider();
+resetAutoSlide();
+
+
 
 
 
@@ -267,6 +387,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// hiển thị menu điện thoại 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    mobileMenu.classList.toggle('active');
+  });
+});
 
 
 

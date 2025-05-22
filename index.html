@@ -56,21 +56,20 @@
             <!-- Main Content -->
             <main id="main-container" class="col-lg-9 col-md-8 main-container">
                 <div class="content-section top">
-                    <ul class="nav-menu">
+                    <ul class="nav-menu desktop-nav">
                         <li class="nav-item"><a class="nav-link" href="#home"><i class="fa fa-home"></i></a></li>
                         <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
-                    <div class="d-flex align-items-center">
+
+                    <div class="d-flex align-items-center right-nav">
                         <ul class="social-list mb-0">
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-solid fa-basketball-ball"></i></a></li>
-                            <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-                            </li>
+                            <li><a href="#"><i class="fa-solid fa-bars" id="menuToggle"></i></a></li>
                         </ul>
                         <button class="hire-btn">Hire Me <i class="fa-solid fa-paper-plane"></i></button>
                     </div>
@@ -81,6 +80,15 @@
 
 
                 <div class="content-section middle">
+
+                    <div class="mobile-menu" id="mobileMenu">
+                        <ul>
+                            <li><a href="#resume">Resume</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
 
 
                     <div class="middle-itme-page home">
@@ -114,28 +122,28 @@
                             <h2>My Services</h2>
                             <div class="services-grid">
                                 <div class="service-box">
-                                    <img src="./imageIcon/code.png" alt="Web Development">
+                                    <img src="./img/imageIcon/code.png" alt="Web Development">
                                     <p>
                                         <strong>Web Development</strong><br>
                                         <span>I have been working on web design for 10 years.</span>
                                     </p>
                                 </div>
                                 <div class="service-box">
-                                    <img src="./imageIcon/note.png" alt="Branding Identity">
+                                    <img src="./img/imageIcon/note.png" alt="Branding Identity">
                                     <p>
                                         <strong>Branding Identity</strong><br>
                                         <span>We will make you a brand that is catchy and leaves a trace.</span>
                                     </p>
                                 </div>
                                 <div class="service-box">
-                                    <img src="./imageIcon/pen.png" alt="Illustrator">
+                                    <img src="./img/imageIcon/pen.png" alt="Illustrator">
                                     <p>
                                         <strong>Illustrator</strong><br>
                                         <span>I have been working on illustration design for 6 years.</span>
                                     </p>
                                 </div>
                                 <div class="service-box">
-                                    <img src="./imageIcon/calender.png" alt="Fast Delivery">
+                                    <img src="./img/imageIcon/calender.png" alt="Fast Delivery">
                                     <p>
                                         <strong>Fast Delivery</strong><br>
                                         <span>I deliver your business as fast as possible.</span>
@@ -188,6 +196,9 @@
                         </div>
 
                     </div>
+
+
+
                     <div class="middle-itme-page resume">
 
                         <div class="resum">
@@ -307,7 +318,7 @@
                                                 for everything.</p>
                                         </div>
 
-                                        <div class="testimonial-card">
+                                        <div class="testimonial-card" data-index="0">
                                             <div class="card-top">
                                                 <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
                                                 <div class="info">
@@ -319,7 +330,7 @@
                                             <p>Great designer! he finished our work wonderfully and just in time. thanks
                                                 for everything.</p>
                                         </div>
-                                        <div class="testimonial-card">
+                                        <div class="testimonial-card" data-index="1">
                                             <div class="card-top">
                                                 <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
                                                 <div class="info">
@@ -331,7 +342,7 @@
                                             <p>Great designer! he finished our work wonderfully and just in time. thanks
                                                 for everything.</p>
                                         </div>
-                                        <div class="testimonial-card">
+                                        <div class="testimonial-card" data-index="2">
                                             <div class="card-top">
                                                 <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
                                                 <div class="info">
@@ -343,7 +354,7 @@
                                             <p>Great designer! he finished our work wonderfully and just in time. thanks
                                                 for everything.</p>
                                         </div>
-                                        <div class="testimonial-card">
+                                        <div class="testimonial-card" data-index="3">
                                             <div class="card-top">
                                                 <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
                                                 <div class="info">
@@ -355,7 +366,7 @@
                                             <p>Great designer! he finished our work wonderfully and just in time. thanks
                                                 for everything.</p>
                                         </div>
-                                        <div class="testimonial-card">
+                                        <div class="testimonial-card" data-index="4">
                                             <div class="card-top">
                                                 <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
                                                 <div class="info">
@@ -367,7 +378,7 @@
                                             <p>Great designer! he finished our work wonderfully and just in time. thanks
                                                 for everything.</p>
                                         </div>
-                                        <div class="testimonial-card">
+                                        <div class="testimonial-card" data-index="5">
                                             <div class="card-top">
                                                 <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
                                                 <div class="info">
@@ -379,7 +390,43 @@
                                             <p>Great designer! he finished our work wonderfully and just in time. thanks
                                                 for everything.</p>
                                         </div>
-                                        <div class="testimonial-card">
+                                        <div class="testimonial-card" data-index="6">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card" data-index="7">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card" data-index="8">
+                                            <div class="card-top">
+                                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
+                                                <div class="info">
+                                                    <h4>Jack Garratt</h4>
+                                                    <small>Freelancer</small>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <p>Great designer! he finished our work wonderfully and just in time. thanks
+                                                for everything.</p>
+                                        </div>
+                                        <div class="testimonial-card" data-index="9">
                                             <div class="card-top">
                                                 <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Avatar">
                                                 <div class="info">
@@ -431,14 +478,6 @@
 
                     </div>
 
-
-
-
-
-
-
-
-
                     <div class="middle-itme-page blog">
 
 
@@ -453,15 +492,9 @@
 
                     </div>
 
-
-
-
-
-
                     <div class="middle-itme-page contact">
 
 
-                        <!-- CONTACT SECTION -->
                         <div class="middle-itme-page contact py-5">
                             <div class="contact-section">
                                 <div class="row gx-5">
@@ -470,17 +503,18 @@
                                         <h5 class="mb-4"><strong>Contact Form</strong></h5>
                                         <form>
                                             <div class="row g-3">
-                                                <div class="col-6">
+                                                <div class="col-12 col-md-6">
                                                     <input type="text"
                                                         class="form-control border-0 border-bottom rounded-0"
                                                         placeholder="Name">
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-12 col-md-6">
                                                     <input type="email"
                                                         class="form-control border-0 border-bottom rounded-0"
                                                         placeholder="E-mail">
                                                 </div>
                                             </div>
+
                                             <div class="mt-4">
                                                 <textarea class="form-control border-0 border-bottom rounded-0" rows="4"
                                                     placeholder="Message"></textarea>
@@ -515,13 +549,18 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="mb-3"><strong>Contact Map.</strong></h5>
-                                        <div class="ratio ratio-16x9 shadow-sm rounded">
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24396.455763004884!2d-115.13108354428735!3d36.18912977254862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+California!5e0!3m2!1sen!2sus!4v1509525039851"
-                                                style="border:0;" allowfullscreen="" loading="lazy"
-                                                referrerpolicy="no-referrer-when-downgrade">
-                                            </iframe>
+                                        <div class="map-info">
+
+                                            <div class="ratio ratio-16x9 shadow-sm rounded map-ratio"
+                                                style=" aspect-ratio: unset !important;height: 400px !important;">
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24396.455763004884!2d-115.13108354428735!3d36.18912977254862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+California!5e0!3m2!1sen!2sus!4v1509525039851"
+                                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade">
+                                                </iframe>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -533,13 +572,20 @@
 
                 </div>
 
+                <div class="content-section bottom bg-dark text-white py-4">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 text-start">
+                                <strong>TechLead</strong>
+                            </div>
 
-
-
-
-
-
-                <div class="content-section bottom"></div>
+                            <!-- Copyright -->
+                            <div class="col-md-6 text-md-end text-start mt-3 mt-md-0">
+                                <small>&copy; 2017 All rights reserved. Designed by Some one</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
             </main>

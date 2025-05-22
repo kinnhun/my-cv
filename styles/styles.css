@@ -100,3 +100,30 @@
 .blog-container  h6,
 .portfolio-section h6,
 .contact-section   h6 { font-size: 0.875rem; }
+
+
+
+
+@media (max-width: 576px) {
+  /* Chuyển 2 cột sidebar–main thành 1 cột */
+  .row-fullh {
+    flex-direction: column;
+  }
+  aside.col-lg-3,
+  main.col-lg-9 {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+}
+.middle{
+  min-height: 100vh;
+}
+
+
+
+.me-3{
+  width: 100px;
+   height: 100px;
+}

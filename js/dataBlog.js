@@ -1,5 +1,6 @@
 export const datablogs = [
   {
+    id: 1,
     title: "Responsive Design Best Practices",
     date: "May 20, 2025",
     content: [
@@ -22,6 +23,7 @@ export const datablogs = [
   },
 
   {
+    id: 2,
     title: "Optimizing Web Performance",
     date: "May 18, 2025",
     content: [
@@ -44,6 +46,7 @@ export const datablogs = [
   },
 
   {
+    id: 3,
     title: "Introduction to ARIA Roles",
     date: "May 15, 2025",
     content: [
@@ -66,6 +69,7 @@ export const datablogs = [
   },
 
   {
+    id: 4,
     title: "Effective Content Strategy",
     date: "May 12, 2025",
     content: [
@@ -88,6 +92,7 @@ export const datablogs = [
   },
 
   {
+    id: 5,
     title: "Branding Through Design Systems",
     date: "May 8, 2025",
     content: [
@@ -110,6 +115,7 @@ export const datablogs = [
   },
 
   {
+    id: 6,
     title: "SEO Fundamentals for Developers",
     date: "May 5, 2025",
     content: [
@@ -132,6 +138,7 @@ export const datablogs = [
   },
 
   {
+    id: 7,
     title: "Modern JavaScript Frameworks",
     date: "May 2, 2025",
     content: [
@@ -154,6 +161,7 @@ export const datablogs = [
   },
 
   {
+    id: 8,
     title: "E-commerce Trends in 2025",
     date: "April 30, 2025",
     content: [
@@ -176,6 +184,7 @@ export const datablogs = [
   },
 
   {
+    id: 9,
     title: "Collaboration Tools for Remote Teams",
     date: "April 28, 2025",
     content: [

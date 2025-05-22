@@ -139,3 +139,61 @@
   transition: width 0.4s ease;
 }
 
+
+
+
+
+
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .services-section {
+    padding: 40px 20px;
+  }
+
+  .skills-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .skills-group h3 {
+    font-size: 15px;
+  }
+
+  .skills-group li span {
+    font-size: 12px;
+  }
+
+  .about-section {
+    padding: 30px 20px;
+  }
+
+  .about-section h2,
+  .services-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .service-box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .service-box strong {
+    font-size: 14px;
+  }
+
+  .service-box span {
+    font-size: 13px;
+  }
+}

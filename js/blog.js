@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'blog-card';
         card.innerHTML = `
+<a href="blog-posts/blog-1.html#${blog.id}" class="blog-link">
           <img src="${blog.imageUrl || './work.jpg'}" 
                alt="${blog.title}" 
                class="blog-image">
@@ -32,7 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
 
 
-          </div>`;
+          </div>
+          
+          </a>
+
+          `;
         blogGrid.appendChild(card);
       });
 
