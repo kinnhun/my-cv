@@ -1,22 +1,21 @@
 
 
-.resum{
+.resum {
   max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .resume-section h2 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 40px;
-  color: #111;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #323232;
 }
 
 .resume-columns {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  gap: 60px;
   justify-content: space-between;
   max-width: 100%;
 }
@@ -26,124 +25,128 @@
 }
 
 .resume-column h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  color: #111;
+  color: #323232;
   margin-bottom: 25px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .resume-column h3 i {
   color: #fcd307;
-  font-size: 16px;
+  font-size: 18px;
 }
 
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  list-style: none;
+  margin: 0;
+}
 
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 14px; /* Điều chỉnh vị trí bắt đầu để khớp với chấm đầu tiên */
+  height: calc(81% - 50px); /* Điều chỉnh chiều dài để kết thúc ở chấm cuối */
+  width: 1px;
+  background-color: #fcd307;
+}
 
 .timeline li {
   position: relative;
   margin-bottom: 35px;
-  padding-left: 20px;
+  padding-bottom: 5px; /* Thêm padding để tạo khoảng cách dưới mỗi item */
+}
+
+.timeline li:last-child {
+  margin-bottom: 0; /* Bỏ margin bottom của item cuối */
+  padding-bottom: 0; /* Bỏ padding bottom của item cuối */
 }
 
 .timeline li::before {
   content: "";
   position: absolute;
-  left: -25px;
-  top: 5px;
-  width: 10px;
-  height: 10px;
+  left: -30px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
   background-color: #fff;
   border: 2px solid #fcd307;
   border-radius: 50%;
 }
 
 .timeline h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   margin: 0;
-  color: #222;
+  color: #323232;
 }
 
 .timeline .date {
-  font-size: 13px;
+  font-size: 14px;
   color: #888;
-  margin: 4px 0 10px;
+  margin: 6px 0 12px;
   display: block;
 }
 
 .timeline p {
-  font-size: 13px;
-  color: #555;
+  font-size: 14px;
+  color: #666;
   margin: 0;
   line-height: 1.6;
 }
 
-
-
-.timeline {
-  position: relative;
-  padding-left: 25px;
-  list-style: none;
-  margin: 0;
-}
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: 6px;
-  bottom: 80px; 
-  width: 2px;
-  background-color: #fcd307;
-  z-index: 0;
-}
-
-
-
-/* clients */
+/* Clients section */
 .clients-section {
-  padding: 40px 30px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  font-family: 'Roboto', sans-serif;
+  margin-top: 50px;
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 20px;
 }
 
 .clients-section h3 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  color: #333;
+  color: #323232;
   margin-bottom: 30px;
 }
 
 .clients-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
 .client-box {
   background-color: #fff;
-  border-radius: 10px;
-  padding: 20px 30px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
-  width: 180px;
-  height: 100px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .client-box img {
   max-width: 100%;
-  max-height: 50px;
+  height: auto;
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  .resume-columns {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 
 /* testimonial */
