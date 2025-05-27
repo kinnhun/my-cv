@@ -118,7 +118,7 @@
    margin: 0;
    padding: 0;
    list-style: none;
-   gap: 10px;
+
  }
 
  .content-section.top .social-list li {
@@ -294,7 +294,6 @@
    margin: 0;
    padding: 0;
    list-style: none;
-   gap: 10px;
    /* Khoảng cách giữa các icon */
  }
 
