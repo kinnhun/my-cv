@@ -26,6 +26,7 @@
 .profile .img-wrapper {
   position: relative;
   margin-bottom: 2.5rem;
+  margin-top: -1,8rem;
 }
 
 .profile img {
@@ -135,12 +136,15 @@
   }
 
   .profile .name {
-    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+}
   }
 
   .profile .job {
-    font-size: 0.95rem;
     margin-bottom: 1rem;
+    font-size: 13px;
   }
 
   .profile .img-wrapper {
@@ -167,7 +171,6 @@
     left: 2rem;
     bottom: 4rem;
   }
-}
 
 
 
@@ -189,7 +192,7 @@
   left: 2.25rem;
   width: 2px;
   background-color: #ccc;
-  background: #fcd307;
+  background: #eeeeee;
 }
 
 .timeline-profile ul.profile-sidebar {
@@ -295,4 +298,27 @@
 
 .img-wrapper{
   margin-top: -4rem;
+}
+
+.text-start .profile-sidebar{
+  margin-top:-1rem;
+}
+
+.profile-sidebar {
+  padding: 1rem 2rem;
+}
+
+.profile .name {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.profile .job {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.profile .download-cv .btn {
+  width: 80%;
 }

@@ -18,7 +18,7 @@
   gap: 60px;
   justify-content: space-between;
   max-width: 100%;
-}
+} 
 
 .resume-column {
   flex: 1;
@@ -53,7 +53,7 @@
   top: -40px; /* Điều chỉnh vị trí bắt đầu để khớp với chấm đầu tiên */
   height: calc(93% - 50px); /* Điều chỉnh chiều dài để kết thúc ở chấm cuối */
   width: 1px;
-  background-color: #fcd307;
+  background-color: #dbdbdb;
 }
 
 .timeline li {
