@@ -1,0 +1,403 @@
+.content-section.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 100;
+  }
+ 
+  .nav-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+ 
+  .nav-menu .nav-item:first-child .nav-link {
+    background-color: #fcd307;
+    color: #000;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+ 
+ 
+  /* Ẩn các item sau Home khi mobile */
+  @media (max-width: 991.98px) {
+    .nav-menu .nav-item:not(:first-child) {
+      display: none;
+    }
+  }
+ 
+ .nav-link-back-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 1.5rem;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border-radius: 0;
+    text-decoration: none;
+ }
+ 
+  .nav-menu .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 1.5rem;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border-radius: 0;
+  }
+ 
+  .nav-menu .nav-item:first-child .nav-link {
+    background-color: #fcd307;
+    color: #000;
+    width: 60px;
+    padding: 0;
+  }
+ 
+  .social-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+ 
+  .social-list li:first-child {
+    border: none;
+  }
+ 
+  .social-list li a,
+  .social-list li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    color: #000;
+  }
+ 
+  .hire-btn {
+    background-color: #fcd307;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    padding: 0 1.5rem;
+    margin: 0 1rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  .hire-btn:hover {
+    background-color: #ffc107;
+  }
+ 
+  .content-section.top .social-list {
+    display: flex !important;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+  }
+ 
+  .content-section.top .social-list li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+ 
+  .content-section.top .social-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    /* bỏ padding cũ */
+    height: auto !important;
+    /* override nếu bị set cứng */
+    font-size: 16px;
+    color: #333;
+  }
+ 
+  /* 4. Hover đổi màu */
+  .content-section.top .social-list li a:hover {
+    color: #fcd307;
+  }
+ 
+  /* 5. Cho nút Hire Me nằm sát icon cuối */
+  .content-section.top .hire-btn {
+    margin-left: 16px;
+    /* điều chỉnh tuỳ ý */
+  }
+ 
+ 
+ 
+  /* menu điẹn thoại*/
+  /* Ẩn menu mobile mặc định */
+  .mobile-menu {
+    display: none;
+    background: white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+ 
+  }
+ 
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+ 
+  .mobile-menu li {
+    border-top: 1px solid #eee;
+  }
+ 
+  .mobile-menu li a {
+    display: block;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+         text-decoration: none;
+ 
+  }
+ 
+  .mobile-menu li a:hover {
+    background: #fcd307;
+  }
+ 
+  /* Hiển thị khi có class active */
+  .mobile-menu.active {
+    display: block;
+  }
+ 
+  /* Responsive */
+  @media (min-width: 992px) {
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+ 
+  .content-section.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+ 
+  .nav-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+ 
+  .nav-menu .nav-item:first-child {
+    border: none;
+  }
+ 
+  .nav-menu .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 1.5rem;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border-radius: 0;
+  }
+ 
+  .nav-menu .nav-item:first-child .nav-link {
+    background-color: #fcd307;
+    color: #000;
+    width: 60px;
+    padding: 0;
+  }
+ 
+  .social-list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+ 
+  .social-list li:first-child {
+    border: none;
+  }
+ 
+  .social-list li a,
+  .social-list li i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    color: #000;
+  }
+ 
+  .hire-btn {
+    background-color: #fcd307;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    padding: 0 1.5rem;
+    margin: 0 1rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  .hire-btn:hover {
+    background-color: #ffc107;
+  }
+ 
+  /* 1. Đảm bảo social-list thành flex container, ghi đè mọi padding/margin cũ */
+  .content-section.top .social-list {
+    display: flex !important;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 10px;
+    /* Khoảng cách giữa các icon */
+  }
+ 
+  /* 2. Xóa hết margin/padding li cũ */
+  .content-section.top .social-list li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+ 
+  /* 3. Style link/icon bên trong li, cho nó tự co chiều cao */
+  .content-section.top .social-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    /* bỏ padding cũ */
+    height: auto !important;
+    /* override nếu bị set cứng */
+    font-size: 16px;
+    color: #333;
+  }
+ 
+  /* 4. Hover đổi màu */
+  .content-section.top .social-list li a:hover {
+    color: #fcd307;
+  }
+ 
+  /* 5. Cho nút Hire Me nằm sát icon cuối */
+  .content-section.top .hire-btn {
+    margin-left: 16px;
+    /* điều chỉnh tuỳ ý */
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  /* Ensure relative positioning of parent */
+  .content-section.middle {
+    position: relative;
+  }
+ 
+  /* Menu đè lên các page bên dưới */
+  .mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+ 
+  .mobile-menu.active {
+    display: block;
+  }
+ 
+  .mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .mobile-menu li {
+    border-top: 1px solid #eee;
+  }
+ 
+  .mobile-menu li a {
+    display: block;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+ 
+  }
+ 
+  .mobile-menu li a:hover {
+    background-color: #fcd307;
+  }
+ 
+  /* Ẩn trên desktop */
+  @media (min-width: 992px) {
+    .mobile-menu {
+      display: none !important;
+    }
+ 
+ 
+  }
+ 
+  @media (max-width: 991.98px) {
+   .social-list li:nth-child(1),
+   .social-list li:nth-child(2),
+   .social-list li:nth-child(3) {
+     display: none;
+   }
+ }
+ 
+ 
+ 

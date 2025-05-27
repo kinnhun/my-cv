@@ -269,8 +269,18 @@ resetAutoSlide();
 
 document.addEventListener('DOMContentLoaded', () => {
   const portfolioItems = [
-    { title: "Babel Admin", description: "Admin template.", category: "Web Design", imageUrl: "../img/portfolio/work2.jpg" },
-    { title: "Motion Graph 1", description: "Motion graphic.", category: "Motion Graphic", imageUrl: "../img/portfolio/work.jpg", videoUrl: "https://www.youtube.com/embed/bpOSxM0rNPM?si=7Lvj1_rgIlK8m-CB" },
+    { title: "Babel Admin", description: "An admin template design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-01.e03b5ee2.jpg" },
+    { title: "My Workspace", description: "My current workspace design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-03.47c30c8c.jpg" },
+    { title: "Doddy App", description: "Mobile app ui kit design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-05.9996d9b7.jpg" },
+  
+    { title: "George Motion", description: "An motion graphic design.", category: "Motion Graphic", imageUrl: "http://127.0.0.1:5501/img/portfolio/work.jpg", videoUrl: "https://www.youtube.com/embed/bpOSxM0rNPM?si=7Lvj1_rgIlK8m-CB" },
+    { title: "Recoba Template", description: "Html template design..", category: "Motion Graphic", imageUrl: "http://127.0.0.1:5501/img/portfolio/work.jpg", videoUrl: "https://www.youtube.com/embed/bpOSxM0rNPM?si=7Lvj1_rgIlK8m-CB" },
+
+    { title: "Bob Stayler ", description: "Illustration characher design..", category: "Illustration", imageUrl: "https://techlead-training.web.app/work-07.d494f586.jpg" },
+    { title: "Exemag Wordpress Theme", description: "Multiconcept Blog Theme..", category: "Illustration", imageUrl: "https://techlead-training.web.app/work-08.c3c81b34.jpg" },
+    { title: "Babel Admin Html Code", description: "An admin template design..", category: "Illustration", imageUrl: "https://techlead-training.web.app/work-09.0be7dc99.jpg" },
+
+    { title: "Babel Admin", description: "An admin template design.", category: "Web Design", imageUrl: "http://127.0.0.1:5501/img/portfolio/work2.jpg" },
     { title: "Amazon Travel", description: "Photography.", category: "Photography", imageUrl: "../img/portfolio/work2.jpg" },
     { title: "Workspace", description: "Illustration.", category: "Illustration", imageUrl: "../img/portfolio/work.jpg" },
     { title: "Recoba", description: "HTML theme.", category: "Web Design", imageUrl: "../img/portfolio/work2.jpg" },
@@ -399,6 +409,22 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenu.classList.toggle('active');
   });
 });
+
+
+
+function setActiveNavLink() {
+  const hash = window.location.hash || '#home';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.getAttribute('href') === hash) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('hashchange', setActiveNavLink);
+window.addEventListener('load', setActiveNavLink);
 
 
 

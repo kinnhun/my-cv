@@ -50,8 +50,8 @@
   content: "";
   position: absolute;
   left: 4px;
-  top: 14px; /* Điều chỉnh vị trí bắt đầu để khớp với chấm đầu tiên */
-  height: calc(81% - 50px); /* Điều chỉnh chiều dài để kết thúc ở chấm cuối */
+  top: -40px; /* Điều chỉnh vị trí bắt đầu để khớp với chấm đầu tiên */
+  height: calc(93% - 50px); /* Điều chỉnh chiều dài để kết thúc ở chấm cuối */
   width: 1px;
   background-color: #fcd307;
 }
@@ -366,4 +366,41 @@
   .timeline::before{
     bottom: 165px;
   }
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-circle {
+    background-color: #fcd307;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    position: relative;
+    margin-left: -1rem;
+}
+
+.icon-circle i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    margin-left: -1rem;
+}
+.fa-briefcase:before, .fa-graduation-cap:before{
+  margin-left: 0.7rem;
+  margin-top: 0.5rem !important;  
+  display: inline-block;
 }

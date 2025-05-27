@@ -23,6 +23,21 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -38,7 +53,8 @@
                     <div class="img-wrapper">
                         <img src="./img/indexImg/profile_left_content.jpg" alt="Profile Picture">
                         <div class="icon-overlay">
-                            <i class="fa-solid fa-glasses"></i>
+                            <span
+                                style="background-image: url('https://techlead-training.web.app/glasses.3e8381e1.png');"></span>
                         </div>
                     </div>
 
@@ -51,9 +67,10 @@
                             <li><strong>Skype</strong>: henryrooney85</li>
                         </ul>
                     </div>
-                  
+
                     <div class="download-cv text-center profile-sidebar">
-                        <button class="btn"><strong>Download Cv</strong> <i class="fa-solid fa-download"></i></button>
+                        <button class="btn"><strong>Download Cv</strong> <i
+                                class="fa fa-download icon-download"></i></button>
                     </div>
                 </div>
             </aside>
@@ -61,7 +78,8 @@
             <main id="main-container" class="col-lg-9 col-md-8 main-container">
                 <div class="content-section top">
                     <ul class="nav-menu desktop-nav">
-                        <li class="nav-item"><a class="nav-link" href="#home"><i class="fa fa-home"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#home"><i class="fa fa-home"
+                                    style="color: black;"></i></a></li>
                         <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
@@ -70,10 +88,13 @@
 
                     <div class="d-flex align-items-center right-nav">
                         <ul class="social-list mb-0">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-solid fa-bars" id="menuToggle"></i></a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" style="text-decoration: none;"><i class="fab fa-dribbble"></i></a></li>
+
+                            <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-bars"
+                                        id="menuToggle"></i></a></li>
                         </ul>
                         <button class="hire-btn">Hire Me <i class="fa-solid fa-paper-plane"></i></button>
                     </div>
@@ -211,9 +232,14 @@
                             <div class="resume-section">
                                 <h2>Resume</h2>
                                 <div class="resume-columns">
+
+
+
+
                                     <!-- Working History -->
                                     <div class="resume-column">
-                                        <h3><i class="fa-solid fa-briefcase"></i> Working History</h3>
+                                        <h3 class="section-title"><i style="color: black;"
+                                                class="fa-solid fa-briefcase icon-circle"></i> Working History</h3>
                                         <ul class="timeline">
                                             <li>
                                                 <h4>Art Director - Facebook Inc</h4>
@@ -247,7 +273,9 @@
 
                                     <!-- Education History -->
                                     <div class="resume-column">
-                                        <h3><i class="fa-solid fa-graduation-cap"></i> Education History</h3>
+                                        <h3 class="section-title"><i style="color: black;"
+                                                class="fa-solid fa-graduation-cap icon-circle"></i> Education History
+                                        </h3>
                                         <ul class="timeline">
                                             <li>
                                                 <h4>Abc University of Los Angeles</h4>
@@ -278,6 +306,11 @@
                                             </li>
                                         </ul>
                                     </div>
+
+
+
+
+
                                 </div>
                             </div>
 
@@ -466,7 +499,8 @@
                             <h1>Portfolio</h1>
                             <div id="filterButtons"></div>
                             <div id="portfolioGrid"></div>
-                            <button id="loadMoreBtn">Load More</button>
+                            <button class="load-more" style="background-color: #fcd307; color: black;"
+                                id="loadMoreBtn">Load More</button>
 
                             <!-- Popup -->
                             <div id="popupOverlay">
@@ -488,7 +522,8 @@
                         <div class="blog-container">
                             <h2>Blog Posts</h2>
                             <div class="blog-grid" id="blogGrid"></div>
-                            <button class="load-more" id="loadMore">Load More</button>
+                            <button class="load-more" id="loadMore"
+                                style="background-color: #fcd307; color: black;">Load More</button>
                         </div>
 
 
@@ -537,16 +572,41 @@
                                             <li><strong>E-mail:</strong> chris@domain.com</li>
                                             <li><strong>Skype:</strong> chrisjohnson85</li>
                                         </ul>
+
+
                                         <ul class="list-inline">
-                                            <li class="list-inline-item"><a href="#" class="text-dark"><i
-                                                        class="fab fa-facebook-f"></i></a></li>
-                                            <li class="list-inline-item"><a href="#" class="text-dark"><i
-                                                        class="fab fa-twitter"></i></a></li>
-                                            <li class="list-inline-item "><a href="#" class="text-dark"><i
-                                                        class="fab fa-instagram"></i></a></li>
-                                            <li class="list-inline-item"><a href="#" class="text-dark"><i
-                                                        class="fab fa-dribbble"></i></a></li>
+                                            <li class="list-inline-item">
+                                                <a href="#" style="color: black; text-decoration: none;"
+                                                    onmouseover="this.style.color='#1877f2'"
+                                                    onmouseout="this.style.color='black'">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#" style="color: black; text-decoration: none;"
+                                                    onmouseover="this.style.color='#1da1f2'"
+                                                    onmouseout="this.style.color='black'">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#" style="color: black; text-decoration: none;"
+                                                    onmouseover="this.style.color='#e4405f'"
+                                                    onmouseout="this.style.color='black'">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#" style="color: black; text-decoration: none;"
+                                                    onmouseover="this.style.color='#ea4c89'"
+                                                    onmouseout="this.style.color='black'">
+                                                    <i class="fab fa-dribbble"></i>
+                                                </a>
+                                            </li>
                                         </ul>
+
+
+
                                     </div>
                                 </div>
                                 <!-- Map -->

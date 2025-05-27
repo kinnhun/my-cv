@@ -1,34 +1,55 @@
- .content-section.top {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background-color: #fff;
-   border-bottom: 1px solid #eee;
-   padding: 0;
-   margin-bottom: 1rem;
-   position: relative;
-   z-index: 100;
- }
+.content-section.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 60px;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0; /* Xoá khoảng hở */
+}
 
- .nav-menu {
-   display: flex;
-   margin: 0;
-   padding: 0;
-   list-style: none;
- }
+.nav-item {
+  margin: 0;
+}
 
- .nav-menu .nav-item:first-child .nav-link {
-   background-color: #fcd307;
-   color: #000;
-   width: 60px;
-   height: 60px;
-   padding: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 1.2rem;
- }
+.nav-menu .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #000;
+  text-decoration: none;
+}
 
+.nav-item:first-child .nav-link {
+  background-color: #fcd307;
+  width: 60px;
+  padding: 0;
+  font-size: 1.2rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Right nav section */
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
  /* Ẩn các item sau Home khi mobile */
  @media (max-width: 991.98px) {
@@ -37,83 +58,59 @@
    }
  }
 
-.nav-link-back-page{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 60px;
-   padding: 0 1.5rem;
-   color: #000;
-   font-weight: 500;
-   text-transform: uppercase;
-   font-size: 0.875rem;
-   border-radius: 0;
-   text-decoration: none;
+
+
+/* Social icons */
+.social-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
 }
 
- .nav-menu .nav-link {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 60px;
-   padding: 0 1.5rem;
-   color: #000;
-   font-weight: 500;
-   text-transform: uppercase;
-   font-size: 0.875rem;
-   border-radius: 0;
- }
+.social-list li {
+  margin: 0;
+  padding: 0;
+}
 
- .nav-menu .nav-item:first-child .nav-link {
-   background-color: #fcd307;
-   color: #000;
-   width: 60px;
-   padding: 0;
- }
+.social-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 0.875rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
- .social-list {
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   margin: 0;
-   padding: 0;
-   list-style: none;
- }
+.social-list li a:hover {
+  color: #fcd307;
+}
 
- .social-list li:first-child {
-   border: none;
- }
+/* Hire button */
+.hire-btn {
+  background-color: #fcd307;
+  border: none;
+  border-radius: 50px;
+  height: 36px;
+  padding: 0 1.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 4px;
+}
 
- .social-list li a,
- .social-list li i {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 60px;
-   padding: 0 1rem;
-   font-size: 0.875rem;
-   color: #000;
- }
-
- .hire-btn {
-   background-color: #fcd307;
-   border: none;
-   border-radius: 50px;
-   height: 40px;
-   padding: 0 1.5rem;
-   margin: 0 1rem;
-   font-weight: 700;
-   font-size: 0.875rem;
-   display: flex;
-   align-items: center;
-   gap: 0.5rem;
-   cursor: pointer;
-   transition: background-color 0.3s;
- }
-
- .hire-btn:hover {
-   background-color: #ffc107;
- }
+.hire-btn:hover {
+  background-color: #ffc107;
+}
 
  .content-section.top .social-list {
    display: flex !important;
@@ -232,7 +229,7 @@
    align-items: center;
    justify-content: center;
    height: 60px;
-   padding: 0 1.5rem;
+   padding: 0 0.4rem; /* Reduce horizontal padding from 1.5rem to 1rem */
    color: #000;
    font-weight: 500;
    text-transform: uppercase;
@@ -400,3 +397,6 @@
 }
 
 
+.fa-send:before, .fa-paper-plane:before{
+  margin-right: -1rem;
+}

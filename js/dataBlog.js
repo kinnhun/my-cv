@@ -1,15 +1,15 @@
 export const datablogs = [
   {
     id: 1,
-    title: "Responsive Design Best Practices",
-    date: "May 20, 2025",
+    title: "See my current workspace",
+    date: "8 Nov 17",
     content: [
-      "Responsive design ensures your site looks great on any device, from mobile phones to large desktop monitors.",
+      "The first thing to remember about success is that it is a process.",
       "Use flexible grids and fluid images to adapt seamlessly to varying screen sizes.",
       "Test breakpoints thoroughly to maintain usability across common device widths.",
       "Optimize media queries to prevent unnecessary reflows and improve performance."
     ],
-    tags: ["web", "responsive", "css", "design"],
+    tags: ["General"],
     relatedPosts: [
       { category: "Web Development", date: "May 18, 2025", title: "CSS Grid vs. Flexbox: When to Use Which?" },
       { category: "UI Design", date: "April 30, 2025", title: "Designing Mobile-First Interfaces" },
@@ -19,20 +19,20 @@ export const datablogs = [
       { author: "Emily R.", date: "May 21, 2025", text: "Great tips on flexible grids! Helped me fix layout issues on my app." },
       { author: "Daniel K.", date: "May 22, 2025", text: "Testing breakpoints saved me debugging hours—thanks for the advice!" }
     ],
-    imageUrl: "../img/blogImg/img1.jpg"
+    imageUrl: "https://techlead-training.web.app/blog-6.c9c9e820.jpg"
   },
 
   {
     id: 2,
-    title: "Optimizing Web Performance",
-    date: "May 18, 2025",
+    title: "Why is it better to work nights?",
+    date: "19 Oct 17",
     content: [
-      "Web performance directly impacts user experience and SEO rankings.",
+      "Legs, and only stopped when he began to feel a mild, dull pain there that he had never felt.",
       "Minify CSS and JavaScript files to reduce payload size and improve load times.",
       "Use HTTP/2 and CDN services to accelerate asset delivery globally.",
       "Leverage browser caching and prefetching for critical resources."
     ],
-    tags: ["performance", "seo", "web", "optimization"],
+    tags: ["User İnterface"],
     relatedPosts: [
       { category: "Performance", date: "May 15, 2025", title: "Image Compression Techniques" },
       { category: "DevOps", date: "April 25, 2025", title: "Setting Up a CDN in Minutes" },
@@ -42,20 +42,20 @@ export const datablogs = [
       { author: "Sara T.", date: "May 19, 2025", text: "Minification tip was spot on—cut my JS bundle by 40%!" },
       { author: "Michael L.", date: "May 20, 2025", text: "Great overview of caching strategies." }
     ],
-    imageUrl: "../img/blogImg/img1.jpg"
+    imageUrl: "https://techlead-training.web.app/blog-2.f9dc025a.jpg"
   },
 
   {
     id: 3,
-    title: "Introduction to ARIA Roles",
-    date: "May 15, 2025",
+    title: "Why is it better to work nights?",
+    date: "19 Oct 17",
     content: [
-      "ARIA roles enhance accessibility by informing assistive technologies about element behaviors.",
+      "Legs, and only stopped when he began to feel a mild, dull pain there that he had never felt.",
       "Use role attributes judiciously to avoid redundant or conflicting information.",
       "Landmark roles like banner, navigation, and main improve screen-reader navigation.",
       "Test your pages with aXe or Lighthouse to catch ARIA issues early."
     ],
-    tags: ["accessibility", "aria", "a11y", "html"],
+    tags: ["User İnterface"],
     relatedPosts: [
       { category: "Accessibility", date: "May 10, 2025", title: "Keyboard Navigation Best Practices" },
       { category: "UI Design", date: "April 22, 2025", title: "Color Contrast for Readability" },
@@ -65,20 +65,20 @@ export const datablogs = [
       { author: "Olivia W.", date: "May 16, 2025", text: "ARIA roles section clarified a lot of confusion I had." },
       { author: "Liam J.", date: "May 17, 2025", text: "Using Lighthouse helped me fix missing roles quickly." }
     ],
-    imageUrl: "../img/blogImg/img1.jpg"
+    imageUrl: "https://techlead-training.web.app/blog-3.54d77f14.jpg"
   },
 
   {
     id: 4,
-    title: "Effective Content Strategy",
-    date: "May 12, 2025",
+    title: "Can you work everywhere?",
+    date: "28 Sep 17",
     content: [
-      "A robust content strategy aligns business goals with user needs.",
+      "Drops of rain could be heard hitting the pane, which made him feel quite sad..",
       "Create an editorial calendar to maintain consistency and avoid last-minute rushes.",
       "Leverage keyword research to inform topic selection and improve discoverability.",
       "Measure content performance with analytics to refine your future strategy."
     ],
-    tags: ["content", "strategy", "marketing", "seo"],
+    tags: ["Photography"],
     relatedPosts: [
       { category: "Marketing", date: "May 5, 2025", title: "Keyword Research Tools Compared" },
       { category: "Web Development", date: "April 29, 2025", title: "Integrating CMS with Static Sites" },
@@ -88,20 +88,20 @@ export const datablogs = [
       { author: "Nathan S.", date: "May 13, 2025", text: "Editorial calendar tip saved me from content chaos!" },
       { author: "Ava M.", date: "May 14, 2025", text: "Great insights on measuring performance." }
     ],
-    imageUrl: "../img/blogImg/img1.jpg"
+    imageUrl: "https://techlead-training.web.app/blog-4.dfc7c2c3.jpg"
   },
 
   {
     id: 5,
-    title: "Branding Through Design Systems",
-    date: "May 8, 2025",
+    title: "How to connect your imac or macBook",
+    date: "19 Agu 17",
     content: [
-      "Design systems ensure brand consistency across products and teams.",
+      "However hard he threw himself onto his right, he always rolled back to where he was.",
       "Document components, patterns, and brand guidelines in a living style guide.",
       "Use tokens for spacing, color, and typography to simplify theming.",
       "Automate visual regression tests to catch unintended style changes."
     ],
-    tags: ["design-systems", "branding", "ui", "workflow"],
+    tags: ["Other"],
     relatedPosts: [
       { category: "Design Systems", date: "May 1, 2025", title: "Building a Theming Architecture" },
       { category: "UI Design", date: "April 20, 2025", title: "Component Library with React" },
@@ -111,20 +111,20 @@ export const datablogs = [
       { author: "Sophia H.", date: "May 9, 2025", text: "Living style guide integration was very helpful." },
       { author: "Ethan P.", date: "May 10, 2025", text: "Automated regression tests saved us from surprises." }
     ],
-    imageUrl: "../img/blogImg/img1.jpg"
+    imageUrl: "https://techlead-training.web.app/blog-5.03fcecf8.jpg"
   },
 
   {
     id: 6,
-    title: "SEO Fundamentals for Developers",
+    title: "I'm starting a new project",
     date: "May 5, 2025",
     content: [
-      "SEO isn't just for marketers—developers play a key role in on-page optimization.",
+      "The first thing to remember about success is that it is a process...",
       "Ensure semantic HTML structure to help search engines understand your content.",
       "Add meaningful meta titles and descriptions to improve click-through rates.",
       "Generate XML sitemaps and use robots.txt to guide crawlers effectively."
     ],
-    tags: ["seo", "web", "developers", "html"],
+    tags: ["Work Space"],
     relatedPosts: [
       { category: "SEO", date: "April 28, 2025", title: "Fixing Redirect Chains" },
       { category: "Performance", date: "April 15, 2025", title: "Core Web Vitals Explained" },
@@ -134,7 +134,7 @@ export const datablogs = [
       { author: "Isabella L.", date: "May 6, 2025", text: "Semantic HTML advice improved our site's rankings." },
       { author: "Benjamin R.", date: "May 7, 2025", text: "Sitemap generation tip worked like a charm." }
     ],
-    imageUrl: "../img/blogImg/img1.jpg"
+    imageUrl: "https://techlead-training.web.app/blog-6.c9c9e820.jpg"
   },
 
   {

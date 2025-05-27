@@ -56,6 +56,14 @@
   color: #000;
 }
 
+.profile .icon-overlay span {
+  display: block;
+  width: 80%;
+  height: 80%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .profile .timeline {
   position: relative;
   padding-left: 5rem;
@@ -106,7 +114,6 @@
 .profile .download-cv .btn:hover {
   background-color: #ffc700;
 }
-
 
 
 
@@ -210,4 +217,82 @@
 
   border: 2px solid #fcd307;
   border-radius: 50%;
+}
+.nav-menu.desktop-nav .nav-item .nav-link.active {
+  color: #fcd307;
+}
+
+.nav-menu.desktop-nav .nav-item .nav-link:hover {
+  color: #fcd307;
+  transition: color 0.3s ease;
+}
+
+.fa-download::before {
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.fa-send:before, .fa-paper-plane:before{
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+
+
+.social-list li a:hover .fa-facebook-f {
+  color: #1877f2;
+}
+
+.social-list li a:hover .fa-twitter {
+  color: #1da1f2;
+}
+
+.social-list li a:hover .fa-instagram {
+  color: #e4405f;
+}
+
+.social-list li a:hover .fa-dribbble {
+  color: #ea4c89;
+}
+
+.social-list li a:hover .fa-bars {
+  color: #fcd307;
+}
+
+
+
+.social-list {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.social-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.social-list li a {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.img-wrapper{
+  margin-top: -4rem;
 }

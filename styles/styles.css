@@ -127,3 +127,10 @@
   width: 100px;
    height: 100px;
 }
+
+body {
+  background: #fafafa url('https://techlead-training.web.app/bg.280cef1c.png');
+  font-family: Roboto, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
