@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechLead Training Layout</title>
+    <title>Trần Trung Kiên - CV</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -14,6 +14,7 @@
     <link href="./styles/styleResum.css" rel="stylesheet">
     <link href="./styles/stylePortfolio.css" rel="stylesheet">
     <link href="./styles/styleBlog.css" rel="stylesheet">
+    <link href="./styles/styleHirePopup.css" rel="stylesheet">
     <link href="./styles/styles.css" rel="stylesheet">
 
 
@@ -47,8 +48,8 @@
             <aside class="col-lg-3 col-md-4">
                 <div class="profile">
                     <div class="text-start profile-sidebar">
-                        <div class="name">HENRY ROONEY</div>
-                        <div class="job">Creative Designer</div>
+                        <div class="name">TRẦN TRUNG KIÊN</div>
+                        <div class="job">Frontend Developer (Junior Developer)</div>
                     </div>
                     <div class="img-wrapper">
                         <img src="./img/indexImg/profile_left_content.jpg" alt="Profile Picture">
@@ -60,17 +61,26 @@
 
                     <div class="timeline-profile">
                         <ul class="profile-sidebar">
-                            <li><strong>Name</strong>: Chris Johnson</li>
-                            <li><strong>Birthday</strong>: 06 December 1987</li>
-                            <li><strong>Job</strong>: Freelancer</li>
-                            <li><strong>Email</strong>: henry@domain.com</li>
-                            <li><strong>Skype</strong>: henryrooney85</li>
+                            <li><span class="li-text"><strong>DOB</strong>: 14/09/2002</span></li>
+                            <li><span class="li-text"><strong>Gender</strong>: Male</span></li>
+                            <li><span class="li-text"><strong>Phone</strong>: 0862497002</span></li>
+                            <li title="trantrungkien14092002@gmail.com"><span class="li-text"><strong>Email</strong>:
+                                    trantrungkien14092002@gmail.com</span></li>
+                            <li title="Bình Nguyên, Kiến Xương, Thái Bình"><span
+                                    class="li-text"><strong>Address</strong>: Bình Nguyên, Kiến
+                                    Xương, Thái Bình</span></li>
+                            <li title="fb.com/kin2901"><span class="li-text"><strong>Facebook</strong>: <a
+                                        href="https://www.facebook.com/kin2901"
+                                        target="_blank">fb.com/kin2901</a></span></li>
                         </ul>
                     </div>
 
                     <div class="download-cv text-center profile-sidebar">
-                        <button class="btn"><strong>Download Cv</strong> <i
-                                class="fa fa-download icon-download"></i></button>
+                        <a href="./Tran-Trung-Kien-CV-Frontend.pdf" download="Tran-Trung-Kien-CV-Frontend.pdf"
+                            style="text-decoration: none;">
+                            <button class="btn"><strong>Download CV</strong> <i
+                                    class="fa fa-download icon-download"></i></button>
+                        </a>
                     </div>
                 </div>
             </aside>
@@ -82,7 +92,7 @@
                                     style="color: black;"></i></a></li>
                         <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
 
@@ -96,7 +106,8 @@
                             <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-bars"
                                         id="menuToggle"></i></a></li>
                         </ul>
-                        <button class="hire-btn">Hire Me <i class="fa-solid fa-paper-plane"></i></button>
+                        <button class="hire-btn" onclick="openHirePopup()">Hire Me <i
+                                class="fa-solid fa-paper-plane"></i></button>
                     </div>
                 </div>
 
@@ -110,7 +121,7 @@
                         <ul>
                             <li><a href="#resume">Resume</a></li>
                             <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#blog">Blog</a></li>
+                            <!-- <li><a href="#blog">Blog</a></li> -->
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
@@ -123,30 +134,51 @@
                             <span class="section-span" style="width: 70px;"></span>
 
                             <p>
-                                Started earnest brother believe an exposed so. Me he believing daughters if forfeited at
-                                furniture. Age
-                                again and stuff downs spoke. Late hour new nay able fat each sell. Nor themselves age
-                                introduced frequently
-                                use unsatiable devonshire get. They why quit gay cold rose deal park. One same they four
-                                did ask busy.
-                                Reserved opinions fat him nay position. Breakfast as zealously incommode do agreeable
-                                furniture. One too nay
-                                led fanny allow plate.
+                                As a passionate Junior Frontend Developer with nearly two years of professional
+                                experience, I specialize in building modern, scalable web applications using React.js
+                                and Next.js. My journey in software development began at FPT University, where I
+                                developed a strong foundation in both frontend and backend technologies, complemented by
+                                hands-on experience in real-world production environments.
                             </p>
                             <p>
-                                Quick six blind smart out burst. Perfectly on furniture dejection determine my depending
-                                an to. Add short
-                                water court fat. Her bachelor honoured perceive securing but desirous ham required.
-                                Questions deficient
-                                acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye
-                                country on observe.
-                                She continue appetite endeavor she judgment interest the met. For she surrounded
-                                motionless fat resolution
-                                may. </p>
+                                Throughout my career, I have successfully contributed to multiple international projects
+                                for Swedish clients at TECHLEAD, where I honed my skills in creating responsive user
+                                interfaces, implementing complex data management systems, and ensuring code quality
+                                through comprehensive testing strategies. Currently at Nemark, I'm developing a
+                                sophisticated Live-Chat system that demonstrates my full-stack capabilities, from
+                                crafting seamless user experiences with React and Next.js to building robust real-time
+                                backend services with Node.js and WebSocket.
+                            </p>
+                            <p>
+                                I am deeply committed to continuous learning and best practices in software development.
+                                My expertise includes writing clean, maintainable code, implementing unit and automation
+                                tests using Cypress, and integrating CI/CD pipelines to ensure reliable deployments. I
+                                thrive in collaborative environments where I can contribute to innovative solutions
+                                while growing as a developer.
+                            </p>
+                        </div>
+
+                        <div class="about-section" style="margin-top: 40px;">
+                            <h2>Career Objective</h2>
+                            <span class="section-span" style="width: 130px;"></span>
+
+                            <p>
+                                I aim to advance my career as a Fullstack Developer with a strong specialization in the
+                                React/Next.js ecosystem. My goal is to join a dynamic team where I can leverage my
+                                skills in building high-performance, user-centric web applications while continuing to
+                                expand my expertise in modern web technologies.
+                            </p>
+                            <p>
+                                I am particularly focused on optimizing user experience, application performance, and
+                                code quality through rigorous testing practices including unit tests and end-to-end
+                                automation. Additionally, I seek opportunities to deepen my backend development skills,
+                                contributing to the architecture and implementation of robust, scalable server-side
+                                systems that power exceptional digital experiences.
+                            </p>
                         </div>
 
                         <div class="services-section">
-                            <h2>My Services
+                            <h2>Technical Skills
 
                                 <span class="section-span" style="width: 110px; margin-top: 10px;"></span>
 
@@ -154,31 +186,32 @@
 
                             <div class="services-grid">
                                 <div class="service-box">
-                                    <img src="./img/imageIcon/code.png" alt="Web Development">
+                                    <img src="./img/imageIcon/code.png" alt="Languages">
                                     <p>
-                                        <strong>Web Development</strong><br>
-                                        <span>I have been working on web design for 10 years.</span>
+                                        <strong>Languages</strong><br>
+                                        <span>JavaScript (ES6+), TypeScript, Java, C#, SQL</span>
                                     </p>
                                 </div>
                                 <div class="service-box">
-                                    <img src="./img/imageIcon/note.png" alt="Branding Identity">
+                                    <img src="./img/imageIcon/note.png" alt="Frontend">
                                     <p>
-                                        <strong>Branding Identity</strong><br>
-                                        <span>We will make you a brand that is catchy and leaves a trace.</span>
+                                        <strong>Frontend</strong><br>
+                                        <span>React.js (Redux, React Router), Next.js, Angular, HTML5, CSS3 (SASS,
+                                            Tailwind CSS)</span>
                                     </p>
                                 </div>
                                 <div class="service-box">
-                                    <img src="./img/imageIcon/pen.png" alt="Illustrator">
+                                    <img src="./img/imageIcon/pen.png" alt="Backend">
                                     <p>
-                                        <strong>Illustrator</strong><br>
-                                        <span>I have been working on illustration design for 6 years.</span>
+                                        <strong>Backend</strong><br>
+                                        <span>Node.js, Express.js, .NET, PHP, JSP/Servlet</span>
                                     </p>
                                 </div>
                                 <div class="service-box">
-                                    <img src="./img/imageIcon/calender.png" alt="Fast Delivery">
+                                    <img src="./img/imageIcon/calender.png" alt="Other">
                                     <p>
-                                        <strong>Fast Delivery</strong><br>
-                                        <span>I deliver your business as fast as possible.</span>
+                                        <strong>Other</strong><br>
+                                        <span>MongoDB, MySQL/SQL Server, RESTful APIs, Cypress, Git, CI/CD</span>
                                     </p>
                                 </div>
                             </div>
@@ -191,37 +224,69 @@
 
                         <div class="skills-section">
                             <div class="skills-group">
-                                <h3>Design Skills</h3>
+                                <h3>Frontend Skills</h3>
                                 <ul>
                                     <li>
-                                        <span>Photoshop</span>
+                                        <span>React/Next.js</span>
+                                        <div class="underline" style="--percent: 85%"></div>
+                                    </li>
+                                    <li>
+                                        <span>TypeScript</span>
+                                        <div class="underline" style="--percent: 80%"></div>
+                                    </li>
+                                    <li>
+                                        <span>HTML5/CSS3</span>
+                                        <div class="underline" style="--percent: 90%"></div>
+                                    </li>
+                                    <li>
+                                        <span>Angular</span>
                                         <div class="underline" style="--percent: 70%"></div>
                                     </li>
                                     <li>
-                                        <span>Sketch</span>
-                                        <div class="underline" style="--percent: 50%"></div>
+                                        <span>Redux/State Management</span>
+                                        <div class="underline" style="--percent: 80%"></div>
                                     </li>
                                     <li>
-                                        <span>Adobe Xd</span>
-                                        <div class="underline" style="--percent: 30%"></div>
+                                        <span>Tailwind CSS/SASS</span>
+                                        <div class="underline" style="--percent: 85%"></div>
+                                    </li>
+                                    <li>
+                                        <span>Responsive Design</span>
+                                        <div class="underline" style="--percent: 90%"></div>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="skills-group">
-                                <h3>Code Skills</h3>
+                                <h3>Backend Skills</h3>
                                 <ul>
                                     <li>
-                                        <span>Javascript</span>
+                                        <span>Node.js/Express</span>
+                                        <div class="underline" style="--percent: 75%"></div>
+                                    </li>
+                                    <li>
+                                        <span>MongoDB/SQL</span>
                                         <div class="underline" style="--percent: 70%"></div>
                                     </li>
                                     <li>
-                                        <span>HTML5</span>
+                                        <span>RESTful APIs</span>
+                                        <div class="underline" style="--percent: 80%"></div>
+                                    </li>
+                                    <li>
+                                        <span>WebSocket/Socket.IO</span>
+                                        <div class="underline" style="--percent: 75%"></div>
+                                    </li>
+                                    <li>
+                                        <span>.NET/PHP</span>
                                         <div class="underline" style="--percent: 60%"></div>
                                     </li>
                                     <li>
-                                        <span>CSS3</span>
-                                        <div class="underline" style="--percent: 40%"></div>
+                                        <span>Unit Testing/Cypress</span>
+                                        <div class="underline" style="--percent: 80%"></div>
+                                    </li>
+                                    <li>
+                                        <span>Git/CI/CD</span>
+                                        <div class="underline" style="--percent: 75%"></div>
                                     </li>
                                 </ul>
                             </div>
@@ -250,30 +315,58 @@
                                                 class="fa-solid fa-briefcase icon-circle"></i> Working History</h3>
                                         <ul class="timeline">
                                             <li>
-                                                <h4>Art Director - Facebook Inc</h4>
-                                                <span class="date">2010 - Present</span>
+                                                <h4>Fullstack Developer - Nemark</h4>
+                                                <span class="date">December 2024 - Present</span>
                                                 <p>
-                                                    Expenses as material breeding insisted building to in. Continual so
-                                                    distrusts pronounce by unwilling
-                                                    listening. Thing do taste on we manor.
+                                                    Developing a comprehensive <strong>Live-Chat system</strong> for
+                                                    real-time customer support.
+                                                </p>
+                                                <p>
+                                                    • <strong>Frontend:</strong> React.js, Next.js, Tailwind CSS<br>
+                                                    • <strong>Backend:</strong> Node.js, Express.js, WebSocket for
+                                                    real-time messaging<br>
+                                                    • <strong>Testing:</strong> Unit tests & Cypress automation
+                                                    tests<br>
+                                                    • <strong>DevOps:</strong> CI/CD pipeline implementation<br>
+                                                    • <strong>Achievement:</strong> Optimized performance for concurrent
+                                                    real-time connections
                                                 </p>
                                             </li>
                                             <li>
-                                                <h4>Senior Designer - Google</h4>
-                                                <span class="date">2008 - 2010</span>
+                                                <h4>Frontend Developer - TECHLEAD</h4>
+                                                <span class="date">January 2024 - December 2024</span>
                                                 <p>
-                                                    So insisted received is occasion advanced honoured. Among ready to
-                                                    which up. Attacks smiling and may out
-                                                    assured moments man nothing outward.
+                                                    Worked on <strong>3 major projects</strong> for Swedish clients
+                                                    using cutting-edge technologies.
+                                                </p>
+                                                <p>
+                                                    • <strong>Projects:</strong> TopCoach (Testing), BJJ (Student
+                                                    Management), YMNER (Angular → Next.js migration)<br>
+                                                    • <strong>Tech Stack:</strong> React, TypeScript, Angular, Next.js,
+                                                    Tailwind CSS<br>
+                                                    • <strong>Responsibilities:</strong> CRUD interfaces, data tables,
+                                                    filters, pagination, Redux state management<br>
+                                                    • <strong>Testing:</strong> Pioneered Cypress automation tests
+                                                    integrated into CI pipeline<br>
+                                                    • <strong>Achievement:</strong> Significantly reduced regression
+                                                    bugs and improved product quality
                                                 </p>
                                             </li>
                                             <li>
-                                                <h4>Junior Designer - Creative Shake</h4>
-                                                <span class="date">2005 - 2008</span>
+                                                <h4>Frontend Development Intern - FPT SOFTWARE</h4>
+                                                <span class="date">January 2024 - April 2024</span>
                                                 <p>
-                                                    Excited him now natural saw passage offices you minuter. At by asked
-                                                    being court hopes. Farther so
-                                                    friends am to detract.
+                                                    Gained hands-on experience in <strong>production-level React
+                                                        applications</strong>.
+                                                </p>
+                                                <p>
+                                                    • Implemented new features and fixed UI bugs<br>
+                                                    • Participated in <strong>code reviews</strong> and learned industry
+                                                    best practices<br>
+                                                    • Optimized UI/UX based on feedback from team leaders and QA
+                                                    testers<br>
+                                                    • Improved skills in <strong>React component architecture</strong>
+                                                    and state management
                                                 </p>
                                             </li>
                                         </ul>
@@ -286,30 +379,24 @@
                                         </h3>
                                         <ul class="timeline">
                                             <li>
-                                                <h4>Abc University of Los Angeles</h4>
-                                                <span class="date">2004 - 2009</span>
+                                                <h4>FPT University - Bachelor of Software Engineering</h4>
+                                                <span class="date">2020 - 2025 (Expected Graduation)</span>
                                                 <p>
-                                                    Expenses as material breeding insisted building to in. Continual so
-                                                    distrusts pronounce by unwilling
-                                                    listening. Thing do taste on we manor.
+                                                    <strong>Major:</strong> Software Engineering |
+                                                    <strong>Focus:</strong> Fullstack Web Development
                                                 </p>
-                                            </li>
-                                            <li>
-                                                <h4>Drawing Course</h4>
-                                                <span class="date">2003 - 2004</span>
                                                 <p>
-                                                    So insisted received is occasion advanced honoured. Among ready to
-                                                    which up. Attacks smiling and may out
-                                                    assured moments man nothing outward.
+                                                    <strong>Key Coursework:</strong><br>
+                                                    • Data Structures & Algorithms<br>
+                                                    • Object-Oriented Programming<br>
+                                                    • Database Management Systems<br>
+                                                    • Software Architecture & Modern Web Technologies
                                                 </p>
-                                            </li>
-                                            <li>
-                                                <h4>Abc High School</h4>
-                                                <span class="date">2000 - 2003</span>
                                                 <p>
-                                                    Excited him now natural saw passage offices you minuter. At by asked
-                                                    being court hopes. Farther so
-                                                    friends am to detract.
+                                                    <strong>Specialization:</strong> JavaScript ecosystem (React.js,
+                                                    Next.js, Node.js, Express.js)<br>
+                                                    <strong>Projects:</strong> Full-stack applications, RESTful API
+                                                    design, Database integration (MongoDB, SQL Server)
                                                 </p>
                                             </li>
                                         </ul>
@@ -326,19 +413,44 @@
 
 
                             <div class="clients-section">
-                                <h3>Clients</h3>
-                                <div class="clients-grid">
-                                    <div class="client-box">
-                                        <img src="./img/imgResum/paymo.jpg" alt="Paymo">
+                                <h3>Key Projects</h3>
+                                <div class="clients-grid projects-grid">
+                                    <div class="client-box project-card">
+                                        <div class="project-content">
+                                            <div class="project-logo">
+                                                <img src="https://topcoach.joosdigital.com/assets/TopCoach%202-AKScL6nM.svg"
+                                                    alt="TopCoach Logo" class="project-logo-img">
+                                            </div>
+                                            <h4 class="project-name">TopCoach</h4>
+                                            <p class="project-desc">Automated Testing</p>
+                                        </div>
                                     </div>
-                                    <div class="client-box">
-                                        <img src="./img/imgResum/envato.jpg" alt="Envato">
+                                    <div class="client-box project-card">
+                                        <div class="project-content">
+                                            <div class="project-logo">
+                                                <img src="https://bjj.joosdigital.com/assets/logo-CjrnNk7O.png"
+                                                    alt="BJJ Logo" class="project-logo-img">
+                                            </div>
+                                            <h4 class="project-name">BJJ</h4>
+                                            <p class="project-desc">Student Management</p>
+                                        </div>
                                     </div>
-                                    <div class="client-box">
-                                        <img src="./img/imgResum/conneqt.jpg" alt="Conneqt">
+                                    <div class="client-box project-card">
+                                        <div class="project-content">
+                                            <div class="project-logo">
+                                                <img src="./img/ymner_black_RGB.webp" alt="YMNER Logo"
+                                                    class="project-logo-img">
+                                            </div>
+                                            <h4 class="project-name">YMNER</h4>
+                                            <p class="project-desc">Angular → Next.js</p>
+                                        </div>
                                     </div>
-                                    <div class="client-box">
-                                        <img src="./img/imgResum/tijdwinst.jpg" alt="Tijdwinst">
+                                    <div class="client-box project-card">
+                                        <div class="project-content">
+                                            <div class="project-icon">🏫</div>
+                                            <h4 class="project-name">HGS</h4>
+                                            <p class="project-desc">School System</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -526,6 +638,7 @@
 
                     </div>
 
+                    <!-- Blog Section Commented Out
                     <div class="middle-itme-page blog">
 
 
@@ -541,6 +654,7 @@
 
 
                     </div>
+                    -->
 
                     <div class="middle-itme-page contact">
 
@@ -581,11 +695,12 @@
                                         <span class="section-span" style="width: 160px;"></span>
 
                                         <ul class="list-unstyled mb-4">
-                                            <li><strong>Address:</strong> 107727 Santa Monica Boulevard Los Angeles</li>
-                                            <li><strong>Phone:</strong> +38 012-3456-7890</li>
-                                            <li><strong>Job:</strong> Freelancer</li>
-                                            <li><strong>E-mail:</strong> chris@domain.com</li>
-                                            <li><strong>Skype:</strong> chrisjohnson85</li>
+                                            <li><strong>Address:</strong> Bình Nguyên, Kiến Xương, Thái Bình</li>
+                                            <li><strong>Phone:</strong> 0862497002</li>
+                                            <li><strong>Job:</strong> Frontend Developer (Junior Developer)</li>
+                                            <li><strong>E-mail:</strong> trantrungkien14092002@gmail.com</li>
+                                            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/kin2901"
+                                                    target="_blank">fb.com/kin2901</a></li>
                                         </ul>
 
 
@@ -633,7 +748,7 @@
                                             <div class="ratio ratio-16x9 shadow-sm rounded map-ratio"
                                                 style=" aspect-ratio: unset !important;height: 400px !important;">
                                                 <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24396.455763004884!2d-115.13108354428735!3d36.18912977254862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+California!5e0!3m2!1sen!2sus!4v1509525039851"
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1216.557391837638!2d105.53073476906403!3d20.987590104121328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345b99d2f5a6ad%3A0x6ff056ed4511a523!2sChung%20C%C6%B0%20Phenikaa!5e1!3m2!1svi!2s!4v1768541518979!5m2!1svi!2s"
                                                     style="border:0;" allowfullscreen="" loading="lazy"
                                                     referrerpolicy="no-referrer-when-downgrade">
                                                 </iframe>
@@ -673,6 +788,57 @@
 
 
 
+        </div>
+    </div>
+
+    <!-- Hire Me Popup Modal -->
+    <div id="hirePopup" class="hire-popup-overlay">
+        <div class="hire-popup-modal">
+            <button class="popup-close-btn" onclick="closeHirePopup()">&times;</button>
+
+            <div class="popup-header">
+                <h2>Let's Work Together!</h2>
+                <p>I'm available for freelance projects. Let's create something amazing!</p>
+            </div>
+
+            <div class="popup-body">
+                <div class="popup-contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:trantrungkien14092002@gmail.com">trantrungkien14092002@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:0862497002">0862497002</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook"></i>
+                        <div>
+                            <strong>Facebook</strong>
+                            <a href="https://www.facebook.com/kin2901" target="_blank">fb.com/kin2901</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-divider">
+                    <span>or send a quick message</span>
+                </div>
+
+                <form class="popup-form" onsubmit="sendHireMessage(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="3" required></textarea>
+                    <button type="submit" class="popup-submit-btn">
+                        <i class="fa-solid fa-paper-plane margin-right-10"></i>Send Message
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
     <!-- Bootstrap JS & dependencies -->

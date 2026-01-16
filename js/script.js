@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { title: "Babel Admin", description: "An admin template design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-01.e03b5ee2.jpg" },
     { title: "My Workspace", description: "My current workspace design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-03.47c30c8c.jpg" },
     { title: "Doddy App", description: "Mobile app ui kit design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-05.9996d9b7.jpg" },
-  
+
     { title: "George Motion", description: "An motion graphic design.", category: "Motion Graphic", imageUrl: "http://127.0.0.1:5501/img/portfolio/work.jpg", videoUrl: "https://www.youtube.com/embed/bpOSxM0rNPM?si=7Lvj1_rgIlK8m-CB" },
     { title: "Recoba Template", description: "Html template design..", category: "Motion Graphic", imageUrl: "http://127.0.0.1:5501/img/portfolio/work.jpg", videoUrl: "https://www.youtube.com/embed/bpOSxM0rNPM?si=7Lvj1_rgIlK8m-CB" },
 
@@ -428,4 +428,59 @@ window.addEventListener('load', setActiveNavLink);
 
 
 
+// ===== HIRE ME POPUP =====
+function openHirePopup() {
+  const popup = document.getElementById('hirePopup');
+  popup.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
 
+function closeHirePopup() {
+  const popup = document.getElementById('hirePopup');
+  popup.classList.remove('active');
+  document.body.style.overflow = ''; // Restore scroll
+}
+
+// Close popup when clicking outside modal
+document.addEventListener('click', function (e) {
+  const popup = document.getElementById('hirePopup');
+  if (e.target === popup) {
+    closeHirePopup();
+  }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeHirePopup();
+  }
+});
+
+// Handle form submission
+function sendHireMessage(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.querySelector('input[type="text"]').value;
+  const email = form.querySelector('input[type="email"]').value;
+  const message = form.querySelector('textarea').value;
+
+  // Create mailto link with form data
+  const subject = encodeURIComponent(`Hire Request from ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+  const mailtoLink = `mailto:trantrungkien14092002@gmail.com?subject=${subject}&body=${body}`;
+
+  window.location.href = mailtoLink;
+
+  // Show success feedback
+  const submitBtn = form.querySelector('.popup-submit-btn');
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '<i class="fas fa-check"></i> Opening Email...';
+  submitBtn.style.background = '#28a745';
+
+  setTimeout(() => {
+    submitBtn.innerHTML = originalText;
+    submitBtn.style.background = '';
+    form.reset();
+    closeHirePopup();
+  }, 2000);
+}
