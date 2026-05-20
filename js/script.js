@@ -269,29 +269,18 @@ resetAutoSlide();
 
 document.addEventListener('DOMContentLoaded', () => {
   const portfolioItems = [
-    { title: "Babel Admin", description: "An admin template design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-01.e03b5ee2.jpg" },
-    { title: "My Workspace", description: "My current workspace design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-03.47c30c8c.jpg" },
-    { title: "Doddy App", description: "Mobile app ui kit design.", category: "Web Design", imageUrl: "https://techlead-training.web.app/work-05.9996d9b7.jpg" },
-
-    { title: "George Motion", description: "An motion graphic design.", category: "Motion Graphic", imageUrl: "http://127.0.0.1:5501/img/portfolio/work.jpg", videoUrl: "https://www.youtube.com/embed/bpOSxM0rNPM?si=7Lvj1_rgIlK8m-CB" },
-    { title: "Recoba Template", description: "Html template design..", category: "Motion Graphic", imageUrl: "http://127.0.0.1:5501/img/portfolio/work.jpg", videoUrl: "https://www.youtube.com/embed/bpOSxM0rNPM?si=7Lvj1_rgIlK8m-CB" },
-
-    { title: "Bob Stayler ", description: "Illustration characher design..", category: "Illustration", imageUrl: "https://techlead-training.web.app/work-07.d494f586.jpg" },
-    { title: "Exemag Wordpress Theme", description: "Multiconcept Blog Theme..", category: "Illustration", imageUrl: "https://techlead-training.web.app/work-08.c3c81b34.jpg" },
-    { title: "Babel Admin Html Code", description: "An admin template design..", category: "Illustration", imageUrl: "https://techlead-training.web.app/work-09.0be7dc99.jpg" },
-
-    { title: "Babel Admin", description: "An admin template design.", category: "Web Design", imageUrl: "http://127.0.0.1:5501/img/portfolio/work2.jpg" },
-    { title: "Amazon Travel", description: "Photography.", category: "Photography", imageUrl: "../img/portfolio/work2.jpg" },
-    { title: "Workspace", description: "Illustration.", category: "Illustration", imageUrl: "../img/portfolio/work.jpg" },
-    { title: "Recoba", description: "HTML theme.", category: "Web Design", imageUrl: "../img/portfolio/work2.jpg" },
-    { title: "Motion Graph 2", description: "Motion graphic.", category: "Motion Graphic", imageUrl: "../img/portfolio/work.jpg", videoUrl: "https://www.youtube.com/embed/bpOSxM0rNPM?si=7Lvj1_rgIlK8m-CB" },
-    // … thêm bao nhiêu items bạn cần
+    { title: "DHT Company", description: "Website thương mại nội thất cao cấp — Thiết kế giao diện hiện đại, catalog sản phẩm, quản lý đơn hàng.", category: "E-Commerce", imageUrl: "./img/portfolio-projects/dht-company.png", siteUrl: "https://dhtcompany.com/" },
+    { title: "Thiên Linh Ấn Feng Shui", description: "Website bán trang sức phong thuỷ — Giao diện sang trọng, tích hợp giỏ hàng & thanh toán online.", category: "E-Commerce", imageUrl: "./img/portfolio-projects/thienlinhan.png", siteUrl: "http://thienlinhanfengshui.com/" },
+    { title: "NewTech Shop", description: "Website bán hàng điện thoại — So sánh sản phẩm, đánh giá, hệ thống quản lý kho thông minh.", category: "E-Commerce", imageUrl: "./img/portfolio-projects/newtech.png", siteUrl: "https://newtechshop.vn/" },
+    { title: "Kính Thông Minh Mercy", description: "Website bán kính thông minh — Landing page công nghệ, tích hợp AR preview & đặt hàng trực tuyến.", category: "Product Landing", imageUrl: "./img/portfolio-projects/mercy-glasses.png", siteUrl: "https://kinhthongminhmercy.vn/" },
+    { title: "Mercy Tech Global", description: "Bot AI auto hỗ trợ bán hàng — Chatbot thông minh, phân tích dữ liệu khách hàng, dashboard analytics.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/mercytech.png", siteUrl: "https://www.mercytechglobal.com/" },
+    { title: "Fervid", description: "Nền tảng luyện thi trực tuyến — Hệ thống đề thi AI, phân tích kết quả học sinh, quản lý lớp học.", category: "EdTech", imageUrl: "./img/portfolio-projects/fervid.png", siteUrl: "https://fervid.vn/" },
   ];
 
-  const categories = ["All", "Web Design", "Motion Graphic", "Illustration", "Photography"];
+  const categories = ["All", "E-Commerce", "Product Landing", "AI / SaaS", "EdTech"];
   let currentCategory = "All";
-  let visibleCount = 9;  // show 9 items đầu tiên
-  const incrementCount = 9;  // mỗi lần load more cũng +9
+  let visibleCount = 9;
+  const incrementCount = 9;
 
   const grid = document.getElementById("portfolioGrid");
   const filterCt = document.getElementById("filterButtons");
@@ -335,15 +324,35 @@ document.addEventListener('DOMContentLoaded', () => {
       const div = document.createElement("div");
       div.className = "portfolio-item";
       div.style.animationDelay = `${idx * 100}ms`;
-      div.innerHTML = `
-        <div class="portfolio-thumb" onclick="openPreview('${item.videoUrl || item.imageUrl}', ${!!item.videoUrl})">
-          <img src="${item.imageUrl}" alt="${item.title}">
-          ${item.videoUrl ? '<div class="play-button"></div>' : ''}
-        </div>
-        <div class="portfolio-content">
-          <h4>${item.title}</h4>
-          <p>${item.description}</p>
-        </div>`;
+
+      // Build image section
+      const thumbDiv = document.createElement("div");
+      thumbDiv.className = "portfolio-thumb";
+
+      const img = document.createElement("img");
+      img.src = item.imageUrl;
+      img.alt = item.title;
+      thumbDiv.appendChild(img);
+
+      const overlay = document.createElement("div");
+      overlay.className = "portfolio-overlay";
+      const visitBtn = document.createElement("a");
+      visitBtn.href = item.siteUrl;
+      visitBtn.target = "_blank";
+      visitBtn.rel = "noopener noreferrer";
+      visitBtn.className = "visit-site-btn";
+      visitBtn.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Site';
+      overlay.appendChild(visitBtn);
+      thumbDiv.appendChild(overlay);
+
+      div.appendChild(thumbDiv);
+
+      // Build info section
+      const contentDiv = document.createElement("div");
+      contentDiv.className = "portfolio-content";
+      contentDiv.innerHTML = '<h4>' + item.title + '</h4><p>' + item.description + '</p><span class="portfolio-category-tag">' + item.category + '</span>';
+      div.appendChild(contentDiv);
+
       grid.appendChild(div);
     });
 
