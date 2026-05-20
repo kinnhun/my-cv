@@ -282,9 +282,14 @@ document.addEventListener('DOMContentLoaded', () => {
       detailHtml: '<h3>📊 Agent 2: Ads Automation</h3><p class="detail-subtitle">Tối ưu hoá quảng cáo đa kênh bằng Rule Engine</p><table class="detail-table"><tr><th>Hạng mục</th><th>Nội dung</th></tr><tr><td>Đa nền tảng</td><td>Tích hợp API chính quy: Facebook Marketing, TikTok Marketing, Google Ads.</td></tr><tr><td>Tự động Setup</td><td>AI nhận diện phân loại bài viết → Tự động set Campaign, Ngân sách, Targeting.</td></tr><tr><td>Real-time Tracking</td><td>Giám sát liên tục: CPC, CPA, CPM, ROAS, Impressions.</td></tr><tr><td>Rule Engine</td><td>"NẾU CPC > 5000đ SAU 3 giờ → Cảnh báo Telegram & Tự động tắt Camp". Bật/tắt qua nút bấm Telegram.</td></tr></table><div class="detail-tags"><span>Facebook Ads API</span><span>TikTok Ads API</span><span>Google Ads</span><span>NestJS</span><span>BullMQ</span><span>Redis</span></div><p class="detail-note">🏗️ Module lõi — Xương sống của hệ thống tự động hoá.</p>' },
     { title: "Agent 3: Auto Post", description: "Tự động hoá phân phối nội dung đa kênh — AI viết caption, hẹn giờ đăng bài FB/TikTok/YouTube.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/agent-autopost.png", siteUrl: "https://www.mercytechglobal.com/",
       detailHtml: '<h3>🚀 Agent 3: Auto Post & AI Content</h3><p class="detail-subtitle">Tự động hoá phân phối nội dung đa kênh</p><table class="detail-table"><tr><th>Hạng mục</th><th>Nội dung</th></tr><tr><td>AI Tạo Caption</td><td>Tích hợp GPT-4o. Gửi 1 Video + tên SP → AI viết bài SEO cho Facebook, bài Hashtag cho TikTok, mô tả cho YouTube Shorts.</td></tr><tr><td>Đăng bài Đa kênh</td><td>Graph API (FB Page), TikTok Content API, YouTube Data API. Đẩy content tự động.</td></tr><tr><td>Hẹn giờ đăng</td><td>Queue System cho phép hẹn giờ theo "Khung giờ vàng" từng nền tảng.</td></tr></table><div class="detail-tags"><span>OpenAI GPT-4o</span><span>Graph API</span><span>TikTok Content API</span><span>YouTube Data API</span><span>BullMQ</span></div><p class="detail-note">📅 Bàn giao sớm nhất — Tuần 1 triển khai, dùng ngay.</p>' },
+    { title: "Web Bất Động Sản", description: "Website bất động sản — Tìm kiếm nhà, căn hộ, văn phòng. Form tư vấn, danh mục dự án, thống kê.", category: "Web Design", imageUrl: "./img/portfolio-projects/web-batdongsan.png" },
+    { title: "Web Giới Thiệu Công Ty", description: "Website giới thiệu doanh nghiệp — Dịch vụ, đội ngũ, thành tựu, đối tác. Thiết kế chuyên nghiệp.", category: "Web Design", imageUrl: "./img/portfolio-projects/web-gioithieu.png" },
+    { title: "Web Radios E-Commerce", description: "Website bán hàng điện tử đa danh mục — Camera, Laptop, Phụ kiện, Deal hàng ngày, Newsletter.", category: "E-Commerce", imageUrl: "./img/portfolio-projects/web-congnghe-1.png" },
+    { title: "Web Technocy Store", description: "Website bán thiết bị công nghệ — Smartphone, Tablet, Gaming, Featured Offers, Deals of the Day.", category: "E-Commerce", imageUrl: "./img/portfolio-projects/web-congnghe-2.png" },
+    { title: "Web EDigit Electronics", description: "Website bán đồ điện tử — Drone, Camera, HeadPhone, Top Categories, Deal of the Week.", category: "E-Commerce", imageUrl: "./img/portfolio-projects/web-congnghe-3.png" },
   ];
 
-  const categories = ["All", "E-Commerce", "Product Landing", "AI / SaaS", "Mobile App", "EdTech"];
+  const categories = ["All", "E-Commerce", "Web Design", "Product Landing", "AI / SaaS", "Mobile App", "EdTech"];
   let currentCategory = "All";
   let visibleCount = 9;
   const incrementCount = 9;
@@ -344,8 +349,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const overlay = document.createElement("div");
       overlay.className = "portfolio-overlay";
 
-      if (item.detailHtml) {
-        // Items with detail popup — show "Xem chi tiết" button
+      if (item.detailHtml || !item.siteUrl) {
+        // Items with detail popup OR screenshot-only items — show "Xem chi tiết"
         const detailBtn = document.createElement("button");
         detailBtn.className = "visit-site-btn";
         detailBtn.innerHTML = '<i class="fa-solid fa-eye"></i> Xem chi tiết';
@@ -355,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         overlay.appendChild(detailBtn);
       } else {
-        // Regular items — show "Visit Site" link
+        // Regular items with siteUrl — show "Visit Site" link
         const visitBtn = document.createElement("a");
         visitBtn.href = item.siteUrl;
         visitBtn.target = "_blank";
@@ -368,10 +373,13 @@ document.addEventListener('DOMContentLoaded', () => {
       thumbDiv.appendChild(overlay);
       div.appendChild(thumbDiv);
 
-      // Build info section
+      // Build info section (with i18n)
+      const translated = (typeof getPortfolioText === 'function') ? getPortfolioText(item.title) : null;
+      const displayTitle = translated ? translated.title : item.title;
+      const displayDesc = translated ? translated.description : item.description;
       const contentDiv = document.createElement("div");
       contentDiv.className = "portfolio-content";
-      contentDiv.innerHTML = '<h4>' + item.title + '</h4><p>' + item.description + '</p><span class="portfolio-category-tag">' + item.category + '</span>';
+      contentDiv.innerHTML = '<h4>' + displayTitle + '</h4><p>' + displayDesc + '</p><span class="portfolio-category-tag">' + item.category + '</span>';
       div.appendChild(contentDiv);
 
       grid.appendChild(div);
@@ -421,9 +429,8 @@ document.addEventListener('DOMContentLoaded', () => {
     popupMedia.innerHTML = "";
   };
 
-  // ===== Detail Popup for AI Agent cards =====
+  // ===== Detail Popup for all portfolio cards =====
   function openDetailPopup(item) {
-    // Create overlay if not existing
     let detailOverlay = document.getElementById("detailPopupOverlay");
     if (!detailOverlay) {
       detailOverlay = document.createElement("div");
@@ -439,16 +446,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // Get translated text
+    const translated = (typeof getPortfolioText === 'function') ? getPortfolioText(item.title) : null;
+    const displayTitle = translated ? translated.title : item.title;
+    const displayDesc = translated ? translated.description : item.description;
+
+    // Build body content
+    let bodyContent = '';
+    if (item.detailHtml) {
+      // Rich detail content (AI Agents)
+      bodyContent = item.detailHtml;
+    } else {
+      // Auto-generated: scrollable full screenshot + description
+      bodyContent = '<h3>' + displayTitle + '</h3>' +
+        '<p class="detail-subtitle">' + displayDesc + '</p>' +
+        '<div class="detail-fullimg-scroll"><img src="' + item.imageUrl + '" alt="' + displayTitle + '"></div>' +
+        '<div class="detail-tags"><span>' + item.category + '</span></div>';
+    }
+
+    // Optional Visit Site link
+    let actionsHtml = '';
+    if (item.siteUrl) {
+      actionsHtml = '<div class="detail-popup-actions">' +
+        '<a href="' + item.siteUrl + '" target="_blank" rel="noopener noreferrer" class="detail-visit-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Truy cập Website</a>' +
+      '</div>';
+    }
+
     detailOverlay.innerHTML = '<div class="detail-popup-modal">' +
       '<button class="detail-popup-close" onclick="closeDetailPopup()">&times;</button>' +
-      '<div class="detail-popup-header">' +
-        '<img src="' + item.imageUrl + '" alt="' + item.title + '">' +
-      '</div>' +
       '<div class="detail-popup-body">' +
-        item.detailHtml +
-        '<div class="detail-popup-actions">' +
-          '<a href="' + item.siteUrl + '" target="_blank" rel="noopener noreferrer" class="detail-visit-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Mercy Tech Global</a>' +
-        '</div>' +
+        bodyContent +
+        actionsHtml +
       '</div>' +
     '</div>';
 
@@ -463,6 +491,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = "";
     }
   };
+
+  // Expose rerender for i18n
+  window.rerenderPortfolio = renderPortfolio;
 
   // Khởi tạo
   renderFilterButtons();

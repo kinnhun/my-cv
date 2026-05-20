@@ -37,8 +37,10 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
-
-
+    <style>
+        .lang-toggle { display:inline-flex; align-items:center; gap:4px; padding:6px 14px; border-radius:50px; border:1px solid #ddd; background:#fff; cursor:pointer; font-size:12px; font-weight:600; color:#333; transition:all 0.2s; margin-left:8px; white-space:nowrap; }
+        .lang-toggle:hover { border-color:#fcd307; background:#fcd307; }
+    </style>
 </head>
 
 <body>
@@ -49,7 +51,7 @@
                 <div class="profile">
                     <div class="text-start profile-sidebar">
                         <div class="name">TRẦN TRUNG KIÊN</div>
-                        <div class="job">Frontend Developer (Junior Developer)</div>
+                        <div class="job" data-i18n="sidebar.job">Frontend Developer (Junior Developer)</div>
                     </div>
                     <div class="img-wrapper">
                         <img src="./img/indexImg/profile_left_content.jpg" alt="Profile Picture">
@@ -61,17 +63,12 @@
 
                     <div class="timeline-profile">
                         <ul class="profile-sidebar">
-                            <li><span class="li-text"><strong>DOB</strong>: 14/09/2002</span></li>
-                            <li><span class="li-text"><strong>Gender</strong>: Male</span></li>
-                            <li><span class="li-text"><strong>Phone</strong>: 0862497002</span></li>
-                            <li title="trantrungkien14092002@gmail.com"><span class="li-text"><strong>Email</strong>:
-                                    trantrungkien14092002@gmail.com</span></li>
-                            <li title="Bình Nguyên, Kiến Xương, Thái Bình"><span
-                                    class="li-text"><strong>Address</strong>: Bình Nguyên, Kiến
-                                    Xương, Thái Bình</span></li>
-                            <li title="fb.com/kin2901"><span class="li-text"><strong>Facebook</strong>: <a
-                                        href="https://www.facebook.com/kin2901"
-                                        target="_blank">fb.com/kin2901</a></span></li>
+                            <li><span class="li-text" data-i18n="sidebar.dob"><strong>DOB</strong>: 14/09/2002</span></li>
+                            <li><span class="li-text" data-i18n="sidebar.gender"><strong>Gender</strong>: Male</span></li>
+                            <li><span class="li-text" data-i18n="sidebar.phone"><strong>Phone</strong>: 0862497002</span></li>
+                            <li><span class="li-text" data-i18n="sidebar.email"><strong>Email</strong>: trantrungkien14092002@gmail.com</span></li>
+                            <li><span class="li-text" data-i18n="sidebar.address"><strong>Address</strong>: Bình Nguyên, Kiến Xương, Thái Bình</span></li>
+                            <li><span class="li-text" data-i18n="sidebar.facebook"><strong>Facebook</strong>: <a href="https://www.facebook.com/kin2901" target="_blank">fb.com/kin2901</a></span></li>
                         </ul>
                     </div>
 
@@ -90,10 +87,10 @@
                     <ul class="nav-menu desktop-nav">
                         <li class="nav-item"><a class="nav-link" href="#home"><i class="fa fa-home"
                                     style="color: black;"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resume" data-i18n="nav.resume">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
 
                     <div class="d-flex align-items-center right-nav">
@@ -106,7 +103,8 @@
                             <li><a href="#" style="text-decoration: none;"><i class="fa-solid fa-bars"
                                         id="menuToggle"></i></a></li>
                         </ul>
-                        <button class="hire-btn" onclick="openHirePopup()">Hire Me <i
+                        <button class="lang-toggle" id="langToggleBtn" onclick="toggleLanguage()">EN</button>
+                        <button class="hire-btn" onclick="openHirePopup()" data-i18n="nav.hireme">Hire Me <i
                                 class="fa-solid fa-paper-plane"></i></button>
                     </div>
                 </div>
@@ -119,10 +117,10 @@
 
                     <div class="mobile-menu" id="mobileMenu">
                         <ul>
-                            <li><a href="#resume">Resume</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#resume" data-i18n="mobile.resume">Resume</a></li>
+                            <li><a href="#portfolio" data-i18n="mobile.portfolio">Portfolio</a></li>
                             <!-- <li><a href="#blog">Blog</a></li> -->
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#contact" data-i18n="mobile.contact">Contact</a></li>
                         </ul>
                     </div>
 
@@ -130,17 +128,17 @@
                     <div class="middle-itme-page home">
 
                         <div class="about-section">
-                            <h2>About Me</h2>
+                            <h2 data-i18n="home.about.title">About Me</h2>
                             <span class="section-span" style="width: 70px;"></span>
 
-                            <p>
+                            <p data-i18n="home.about.p1">
                                 I am a young and enthusiastic Frontend developer with over a year of professional
                                 experience, I specialize in building modern, scalable web applications using React.js
                                 and Next.js. My journey in software development began at FPT University, where I
                                 developed a strong foundation in both frontend and backend technologies, complemented by
                                 hands-on experience in real-world production environments.
                             </p>
-                            <p>
+                            <p data-i18n="home.about.p2">
                                 Throughout my career, I have successfully contributed to multiple international projects
                                 for Swedish clients at TECHLEAD, where I honed my skills in creating responsive user
                                 interfaces, implementing complex data management systems, and ensuring code quality
@@ -149,7 +147,7 @@
                                 crafting seamless user experiences with React and Next.js to building robust real-time
                                 backend services with Node.js and WebSocket.
                             </p>
-                            <p>
+                            <p data-i18n="home.about.p3">
                                 I am deeply committed to continuous learning and best practices in software development.
                                 My expertise includes writing clean, maintainable code, implementing unit and automation
                                 tests using Cypress, and integrating CI/CD pipelines to ensure reliable deployments. I
@@ -159,16 +157,16 @@
                         </div>
 
                         <div class="about-section" style="margin-top: 40px;">
-                            <h2>Career Objective</h2>
+                            <h2 data-i18n="home.career.title">Career Objective</h2>
                             <span class="section-span" style="width: 130px;"></span>
 
-                            <p>
+                            <p data-i18n="home.career.p1">
                                 I aim to advance my career as a Fullstack Developer with a strong specialization in the
                                 React/Next.js ecosystem. My goal is to join a dynamic team where I can leverage my
                                 skills in building high-performance, user-centric web applications while continuing to
                                 expand my expertise in modern web technologies.
                             </p>
-                            <p>
+                            <p data-i18n="home.career.p2">
                                 I am particularly focused on optimizing user experience, application performance, and
                                 code quality through rigorous testing practices including unit tests and end-to-end
                                 automation. Additionally, I seek opportunities to deepen my backend development skills,
@@ -178,7 +176,7 @@
                         </div>
 
                         <div class="services-section">
-                            <h2>Technical Skills
+                            <h2 data-i18n="home.skills.title">Technical Skills
 
                                 <span class="section-span" style="width: 110px; margin-top: 10px;"></span>
 
@@ -224,7 +222,7 @@
 
                         <div class="skills-section">
                             <div class="skills-group">
-                                <h3>Frontend Skills</h3>
+                                <h3 data-i18n="skill.frontend">Frontend Skills</h3>
                                 <ul>
                                     <li>
                                         <span>React/Next.js</span>
@@ -258,7 +256,7 @@
                             </div>
 
                             <div class="skills-group">
-                                <h3>Backend Skills</h3>
+                                <h3 data-i18n="skill.backend">Backend Skills</h3>
                                 <ul>
                                     <li>
                                         <span>Node.js/Express</span>
@@ -302,7 +300,7 @@
 
 
                             <div class="resume-section">
-                                <h2>Resume</h2>
+                                <h2 data-i18n="resume.title">Resume</h2>
                                 <span class="section-span" style="width: 60px; margin-bottom: 40px;"></span>
                                 <div class="resume-columns">
 
@@ -602,7 +600,7 @@
                     <div class="middle-itme-page portfolio">
 
                         <div class="portfolio-section">
-                            <h2>Portfolio</h2>
+                            <h2 data-i18n="portfolio.title">Portfolio</h2>
                             <span class="section-span" style="width: 65px; margin-top: -10px;"></span>
 
                             <div id="filterButtons"></div>
@@ -650,7 +648,7 @@
                                 <div class="row gx-5">
                                     <!-- Left: Form -->
                                     <div class="col-md-6 mb-4">
-                                        <h5 class="mb-4"><strong>Contact Form</strong></h5>
+                                        <h5 class="mb-4" data-i18n="contact.form.title"><strong>Contact Form</strong></h5>
                                         <span class="section-span" style="width: 100px; "></span>
 
                                         <form>
@@ -677,7 +675,7 @@
                                     </div>
                                     <!-- Right: Contact Info -->
                                     <div class="col-md-6 mb-4">
-                                        <h5 class="mb-4"><strong>Contact Informations</strong></h5>
+                                        <h5 class="mb-4" data-i18n="contact.info.title"><strong>Contact Informations</strong></h5>
                                         <span class="section-span" style="width: 160px;"></span>
 
                                         <ul class="list-unstyled mb-4">
@@ -763,7 +761,7 @@
 
                             <!-- Copyright -->
                             <div class="col-md-6 text-md-end text-start mt-3 mt-md-0">
-                                <small>&copy; 2017 All rights reserved. Designed by Some one</small>
+                                <small data-i18n="footer.copyright">&copy; 2025 All rights reserved. Designed by Trần Trung Kiên</small>
                             </div>
                         </div>
                     </div>
@@ -783,8 +781,8 @@
             <button class="popup-close-btn" onclick="closeHirePopup()">&times;</button>
 
             <div class="popup-header">
-                <h2>Let's Work Together!</h2>
-                <p>I'm available for freelance projects. Let's create something amazing!</p>
+                <h2 data-i18n="hire.title">Let's Work Together!</h2>
+                <p data-i18n="hire.subtitle">I'm available for freelance projects. Let's create something amazing!</p>
             </div>
 
             <div class="popup-body">
@@ -831,6 +829,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
+    <!-- i18n -->
+    <script src="./js/i18n.js"></script>
     <!-- Custom JS -->
     <script src="./js/script.js"></script>
     <!-- load dataBlog.js trước -->
