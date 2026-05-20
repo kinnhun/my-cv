@@ -275,9 +275,11 @@ document.addEventListener('DOMContentLoaded', () => {
     { title: "Kính Thông Minh Mercy", description: "Website bán kính thông minh — Landing page công nghệ, tích hợp AR preview & đặt hàng trực tuyến.", category: "Product Landing", imageUrl: "./img/portfolio-projects/mercy-glasses.png", siteUrl: "https://kinhthongminhmercy.vn/" },
     { title: "Mercy Tech Global", description: "Bot AI auto hỗ trợ bán hàng — Chatbot thông minh, phân tích dữ liệu khách hàng, dashboard analytics.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/mercytech.png", siteUrl: "https://www.mercytechglobal.com/" },
     { title: "Fervid", description: "Nền tảng luyện thi trực tuyến — Hệ thống đề thi AI, phân tích kết quả học sinh, quản lý lớp học.", category: "EdTech", imageUrl: "./img/portfolio-projects/fervid.png", siteUrl: "https://fervid.vn/" },
+    { title: "App Buffet POS", description: "Ứng dụng quản lý nhà hàng Buffet — Gọi món, quản lý bàn, thanh toán, thống kê doanh thu realtime.", category: "Mobile App", imageUrl: "./img/portfolio-projects/pos-app.png", siteUrl: "https://app-buffet.vercel.app/" },
+    { title: "Hệ Sinh Thái 3 AI Agents", description: "Giải pháp tự động hoá Marketing đa kênh — Research Bot, Ads Automation, Auto Post. Telegram Bot làm trung tâm điều khiển.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/ai-agents.png", siteUrl: "https://www.mercytechglobal.com/" },
   ];
 
-  const categories = ["All", "E-Commerce", "Product Landing", "AI / SaaS", "EdTech"];
+  const categories = ["All", "E-Commerce", "Product Landing", "AI / SaaS", "Mobile App", "EdTech"];
   let currentCategory = "All";
   let visibleCount = 9;
   const incrementCount = 9;
