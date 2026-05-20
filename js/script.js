@@ -276,7 +276,12 @@ document.addEventListener('DOMContentLoaded', () => {
     { title: "Mercy Tech Global", description: "Bot AI auto hỗ trợ bán hàng — Chatbot thông minh, phân tích dữ liệu khách hàng, dashboard analytics.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/mercytech.png", siteUrl: "https://www.mercytechglobal.com/" },
     { title: "Fervid", description: "Nền tảng luyện thi trực tuyến — Hệ thống đề thi AI, phân tích kết quả học sinh, quản lý lớp học.", category: "EdTech", imageUrl: "./img/portfolio-projects/fervid.png", siteUrl: "https://fervid.vn/" },
     { title: "App Buffet POS", description: "Ứng dụng quản lý nhà hàng Buffet — Gọi món, quản lý bàn, thanh toán, thống kê doanh thu realtime.", category: "Mobile App", imageUrl: "./img/portfolio-projects/pos-app.png", siteUrl: "https://app-buffet.vercel.app/" },
-    { title: "Hệ Sinh Thái 3 AI Agents", description: "Giải pháp tự động hoá Marketing đa kênh — Research Bot, Ads Automation, Auto Post. Telegram Bot làm trung tâm điều khiển.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/ai-agents.png", siteUrl: "https://www.mercytechglobal.com/" },
+    { title: "Agent 1: Research Bot", description: "Thu thập dữ liệu đối thủ & xu hướng thị trường từ TikTok/Facebook — Dashboard trực quan, Export Excel.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/agent-research.png", siteUrl: "https://www.mercytechglobal.com/",
+      detailHtml: '<h3>🔍 Agent 1: Market Research Bot</h3><p class="detail-subtitle">Thu thập dữ liệu đối thủ và xu hướng thị trường tự động</p><table class="detail-table"><tr><th>Hạng mục</th><th>Nội dung</th></tr><tr><td>Crawl TikTok Shop</td><td>Lấy tên SP, giá, lượt bán, rating, doanh số ước tính. Dùng Headless Browser (Playwright).</td></tr><tr><td>Crawl Facebook Page</td><td>Quét bài viết tương tác cao, từ khóa trending. Kỹ thuật bypass anti-bot.</td></tr><tr><td>Web Dashboard</td><td>Giao diện biểu đồ (Bar, Line) tóm tắt data. Nút Export to Excel. Next.js + Recharts.</td></tr></table><div class="detail-tags"><span>Playwright</span><span>BrightData Proxy</span><span>Next.js</span><span>Recharts</span><span>Telegram Bot</span></div><p class="detail-note">⚠️ Module thực nghiệm — phụ thuộc chính sách chống bot của nền tảng.</p>' },
+    { title: "Agent 2: Ads Automation", description: "Tối ưu quảng cáo đa kênh (FB, TikTok, Google) — Rule Engine tự động tắt/bật Campaign, cảnh báo realtime.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/agent-ads.png", siteUrl: "https://www.mercytechglobal.com/",
+      detailHtml: '<h3>📊 Agent 2: Ads Automation</h3><p class="detail-subtitle">Tối ưu hoá quảng cáo đa kênh bằng Rule Engine</p><table class="detail-table"><tr><th>Hạng mục</th><th>Nội dung</th></tr><tr><td>Đa nền tảng</td><td>Tích hợp API chính quy: Facebook Marketing, TikTok Marketing, Google Ads.</td></tr><tr><td>Tự động Setup</td><td>AI nhận diện phân loại bài viết → Tự động set Campaign, Ngân sách, Targeting.</td></tr><tr><td>Real-time Tracking</td><td>Giám sát liên tục: CPC, CPA, CPM, ROAS, Impressions.</td></tr><tr><td>Rule Engine</td><td>"NẾU CPC > 5000đ SAU 3 giờ → Cảnh báo Telegram & Tự động tắt Camp". Bật/tắt qua nút bấm Telegram.</td></tr></table><div class="detail-tags"><span>Facebook Ads API</span><span>TikTok Ads API</span><span>Google Ads</span><span>NestJS</span><span>BullMQ</span><span>Redis</span></div><p class="detail-note">🏗️ Module lõi — Xương sống của hệ thống tự động hoá.</p>' },
+    { title: "Agent 3: Auto Post", description: "Tự động hoá phân phối nội dung đa kênh — AI viết caption, hẹn giờ đăng bài FB/TikTok/YouTube.", category: "AI / SaaS", imageUrl: "./img/portfolio-projects/agent-autopost.png", siteUrl: "https://www.mercytechglobal.com/",
+      detailHtml: '<h3>🚀 Agent 3: Auto Post & AI Content</h3><p class="detail-subtitle">Tự động hoá phân phối nội dung đa kênh</p><table class="detail-table"><tr><th>Hạng mục</th><th>Nội dung</th></tr><tr><td>AI Tạo Caption</td><td>Tích hợp GPT-4o. Gửi 1 Video + tên SP → AI viết bài SEO cho Facebook, bài Hashtag cho TikTok, mô tả cho YouTube Shorts.</td></tr><tr><td>Đăng bài Đa kênh</td><td>Graph API (FB Page), TikTok Content API, YouTube Data API. Đẩy content tự động.</td></tr><tr><td>Hẹn giờ đăng</td><td>Queue System cho phép hẹn giờ theo "Khung giờ vàng" từng nền tảng.</td></tr></table><div class="detail-tags"><span>OpenAI GPT-4o</span><span>Graph API</span><span>TikTok Content API</span><span>YouTube Data API</span><span>BullMQ</span></div><p class="detail-note">📅 Bàn giao sớm nhất — Tuần 1 triển khai, dùng ngay.</p>' },
   ];
 
   const categories = ["All", "E-Commerce", "Product Landing", "AI / SaaS", "Mobile App", "EdTech"];
@@ -338,15 +343,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const overlay = document.createElement("div");
       overlay.className = "portfolio-overlay";
-      const visitBtn = document.createElement("a");
-      visitBtn.href = item.siteUrl;
-      visitBtn.target = "_blank";
-      visitBtn.rel = "noopener noreferrer";
-      visitBtn.className = "visit-site-btn";
-      visitBtn.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Site';
-      overlay.appendChild(visitBtn);
-      thumbDiv.appendChild(overlay);
 
+      if (item.detailHtml) {
+        // Items with detail popup — show "Xem chi tiết" button
+        const detailBtn = document.createElement("button");
+        detailBtn.className = "visit-site-btn";
+        detailBtn.innerHTML = '<i class="fa-solid fa-eye"></i> Xem chi tiết';
+        detailBtn.addEventListener("click", function(e) {
+          e.stopPropagation();
+          openDetailPopup(item);
+        });
+        overlay.appendChild(detailBtn);
+      } else {
+        // Regular items — show "Visit Site" link
+        const visitBtn = document.createElement("a");
+        visitBtn.href = item.siteUrl;
+        visitBtn.target = "_blank";
+        visitBtn.rel = "noopener noreferrer";
+        visitBtn.className = "visit-site-btn";
+        visitBtn.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Site';
+        overlay.appendChild(visitBtn);
+      }
+
+      thumbDiv.appendChild(overlay);
       div.appendChild(thumbDiv);
 
       // Build info section
@@ -400,6 +419,49 @@ document.addEventListener('DOMContentLoaded', () => {
   window.closePopup = () => {
     popupOverlay.classList.remove("active");
     popupMedia.innerHTML = "";
+  };
+
+  // ===== Detail Popup for AI Agent cards =====
+  function openDetailPopup(item) {
+    // Create overlay if not existing
+    let detailOverlay = document.getElementById("detailPopupOverlay");
+    if (!detailOverlay) {
+      detailOverlay = document.createElement("div");
+      detailOverlay.id = "detailPopupOverlay";
+      detailOverlay.className = "detail-popup-overlay";
+      document.body.appendChild(detailOverlay);
+
+      detailOverlay.addEventListener("click", function(e) {
+        if (e.target === detailOverlay) closeDetailPopup();
+      });
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") closeDetailPopup();
+      });
+    }
+
+    detailOverlay.innerHTML = '<div class="detail-popup-modal">' +
+      '<button class="detail-popup-close" onclick="closeDetailPopup()">&times;</button>' +
+      '<div class="detail-popup-header">' +
+        '<img src="' + item.imageUrl + '" alt="' + item.title + '">' +
+      '</div>' +
+      '<div class="detail-popup-body">' +
+        item.detailHtml +
+        '<div class="detail-popup-actions">' +
+          '<a href="' + item.siteUrl + '" target="_blank" rel="noopener noreferrer" class="detail-visit-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Mercy Tech Global</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+    detailOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  window.closeDetailPopup = function() {
+    const overlay = document.getElementById("detailPopupOverlay");
+    if (overlay) {
+      overlay.classList.remove("active");
+      document.body.style.overflow = "";
+    }
   };
 
   // Khởi tạo

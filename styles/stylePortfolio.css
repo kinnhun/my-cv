@@ -289,3 +289,187 @@
     padding: 4px 8px;
   }
 }
+
+/* ===== Detail Popup for AI Agent Cards ===== */
+.detail-popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.detail-popup-overlay.active {
+  display: flex;
+}
+
+.detail-popup-modal {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: popupSlideIn 0.35s ease;
+}
+
+@keyframes popupSlideIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.detail-popup-close {
+  position: absolute;
+  top: 12px; right: 16px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.detail-popup-close:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.detail-popup-header {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+.detail-popup-header img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-popup-body {
+  padding: 28px 32px 32px;
+}
+
+.detail-popup-body h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.detail-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.detail-table th,
+.detail-table td {
+  border: 1px solid #e8e8e8;
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.detail-table th {
+  background: #f8f8f8;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.detail-table td:first-child {
+  font-weight: 600;
+  color: #444;
+  white-space: nowrap;
+  width: 160px;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.detail-tags span {
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #fcd307;
+  color: #111;
+}
+
+.detail-note {
+  font-size: 13px;
+  color: #555;
+  background: #fffbe6;
+  border-left: 3px solid #fcd307;
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 20px;
+}
+
+.detail-popup-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.detail-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: #fcd307;
+  color: #111;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.detail-visit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(252, 211, 7, 0.4);
+}
+
+@media (max-width: 768px) {
+  .detail-popup-modal {
+    max-width: 95%;
+    border-radius: 12px;
+  }
+
+  .detail-popup-header img {
+    height: 160px;
+  }
+
+  .detail-popup-body {
+    padding: 20px;
+  }
+
+  .detail-table td:first-child {
+    white-space: normal;
+    width: auto;
+  }
+}
