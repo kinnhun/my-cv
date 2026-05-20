@@ -3,7 +3,7 @@
 const translations = {
   en: {
     // Sidebar
-    "sidebar.job": "Frontend Developer (Junior Developer)",
+    "sidebar.job": "Fullstack Developer",
     "sidebar.dob": "<strong>DOB</strong>: 14/09/2002",
     "sidebar.gender": "<strong>Gender</strong>: Male",
     "sidebar.phone": "<strong>Phone</strong>: 0862497002",
@@ -25,14 +25,14 @@ const translations = {
 
     // Home - About
     "home.about.title": "About Me",
-    "home.about.p1": "I am a young and enthusiastic Frontend developer with over a year of professional experience, I specialize in building modern, scalable web applications using React.js and Next.js. My journey in software development began at FPT University, where I developed a strong foundation in both frontend and backend technologies, complemented by hands-on experience in real-world production environments.",
-    "home.about.p2": "Throughout my career, I have successfully contributed to multiple international projects for Swedish clients at TECHLEAD, where I honed my skills in creating responsive user interfaces, implementing complex data management systems, and ensuring code quality through comprehensive testing strategies. Currently at Nemark, I'm developing a sophisticated Live-Chat system that demonstrates my full-stack capabilities, from crafting seamless user experiences with React and Next.js to building robust real-time backend services with Node.js and WebSocket.",
-    "home.about.p3": "I am deeply committed to continuous learning and best practices in software development. My expertise includes writing clean, maintainable code, implementing unit and automation tests using Cypress, and integrating CI/CD pipelines to ensure reliable deployments. I thrive in collaborative environments where I can contribute to innovative solutions while growing as a developer.",
+    "home.about.p1": "I am a passionate Fullstack Developer with over a year of professional experience, specializing in building modern, scalable web applications across the entire stack — from interactive UIs with React.js and Next.js to robust backends with Node.js, Express.js, and database systems. My journey began at FPT University, where I built a strong foundation in both frontend and backend technologies.",
+    "home.about.p2": "Throughout my career, I have contributed to multiple international projects for Swedish clients at TECHLEAD, and built a sophisticated Live-Chat system at Nemark using React, Next.js, Node.js, and WebSocket. Beyond traditional web development, I design and develop AI-powered automation systems — including multi-channel marketing bots, e-commerce platforms, and real estate websites as freelance projects.",
+    "home.about.p3": "I am deeply committed to clean code, comprehensive testing (Cypress, unit tests), and CI/CD best practices. I thrive in environments where I can architect end-to-end solutions — from database design to API development to polished user interfaces.",
 
     // Home - Career Objective
     "home.career.title": "Career Objective",
-    "home.career.p1": "I aim to advance my career as a Fullstack Developer with a strong specialization in the React/Next.js ecosystem. My goal is to join a dynamic team where I can leverage my skills in building high-performance, user-centric web applications while continuing to expand my expertise in modern web technologies.",
-    "home.career.p2": "I am particularly focused on optimizing user experience, application performance, and code quality through rigorous testing practices including unit tests and end-to-end automation. Additionally, I seek opportunities to deepen my backend development skills, contributing to the architecture and implementation of robust, scalable server-side systems that power exceptional digital experiences.",
+    "home.career.p1": "I aim to grow as a senior Fullstack Developer with deep expertise across the React/Next.js ecosystem and Node.js backend architecture. My goal is to lead end-to-end product development — from system design and API architecture to performant, user-centric frontends.",
+    "home.career.p2": "I am especially interested in building AI-integrated platforms, SaaS products, and automation systems. I seek opportunities to architect scalable solutions that combine modern web technologies with intelligent automation to deliver exceptional digital experiences.",
 
     // Home - Technical Skills
     "home.skills.title": "Technical Skills",
@@ -88,7 +88,7 @@ const translations = {
     "contact.map.title": "<strong>Contact Map.</strong>",
     "contact.info.address": "<strong>Address:</strong> Bình Nguyên, Kiến Xương, Thái Bình",
     "contact.info.phone": "<strong>Phone:</strong> 0862497002",
-    "contact.info.job": "<strong>Job:</strong> Frontend Developer (Junior Developer)",
+    "contact.info.job": "<strong>Job:</strong> Fullstack Developer",
     "contact.info.email": '<strong>E-mail:</strong> trantrungkien14092002@gmail.com',
     "contact.info.fb": '<strong>Facebook:</strong> <a href="https://www.facebook.com/kin2901" target="_blank">fb.com/kin2901</a>',
 
@@ -107,7 +107,7 @@ const translations = {
 
   vi: {
     // Sidebar
-    "sidebar.job": "Lập trình viên Frontend (Junior)",
+    "sidebar.job": "Lập trình viên Fullstack",
     "sidebar.dob": "<strong>Ngày sinh</strong>: 14/09/2002",
     "sidebar.gender": "<strong>Giới tính</strong>: Nam",
     "sidebar.phone": "<strong>SĐT</strong>: 0862497002",
@@ -129,14 +129,14 @@ const translations = {
 
     // Home - About
     "home.about.title": "Giới Thiệu",
-    "home.about.p1": "Tôi là một lập trình viên Frontend trẻ và nhiệt huyết với hơn một năm kinh nghiệm chuyên môn, chuyên xây dựng các ứng dụng web hiện đại, có khả năng mở rộng bằng React.js và Next.js. Hành trình phát triển phần mềm của tôi bắt đầu tại Đại học FPT, nơi tôi xây dựng nền tảng vững chắc về cả công nghệ frontend và backend, kết hợp với kinh nghiệm thực tế trong môi trường sản xuất thực.",
-    "home.about.p2": "Trong suốt sự nghiệp, tôi đã đóng góp thành công vào nhiều dự án quốc tế cho khách hàng Thụy Điển tại TECHLEAD, nơi tôi trau dồi kỹ năng tạo giao diện người dùng responsive, triển khai hệ thống quản lý dữ liệu phức tạp và đảm bảo chất lượng code thông qua các chiến lược testing toàn diện. Hiện tại tại Nemark, tôi đang phát triển hệ thống Live-Chat tinh vi thể hiện khả năng full-stack, từ xây dựng trải nghiệm người dùng mượt mà với React và Next.js đến xây dựng backend realtime mạnh mẽ với Node.js và WebSocket.",
-    "home.about.p3": "Tôi cam kết sâu sắc với việc học hỏi liên tục và các best practice trong phát triển phần mềm. Chuyên môn của tôi bao gồm viết code sạch, dễ bảo trì, triển khai unit test và automation test bằng Cypress, tích hợp CI/CD pipeline để đảm bảo triển khai đáng tin cậy. Tôi phát triển tốt trong môi trường hợp tác, nơi tôi có thể đóng góp vào các giải pháp sáng tạo.",
+    "home.about.p1": "Tôi là một lập trình viên Fullstack đam mê với hơn một năm kinh nghiệm chuyên môn, chuyên xây dựng các ứng dụng web hiện đại, có khả năng mở rộng trên toàn bộ stack — từ giao diện tương tác với React.js và Next.js đến backend mạnh mẽ với Node.js, Express.js và hệ thống cơ sở dữ liệu. Hành trình của tôi bắt đầu tại Đại học FPT.",
+    "home.about.p2": "Trong suốt sự nghiệp, tôi đã đóng góp vào nhiều dự án quốc tế cho khách hàng Thụy Điển tại TECHLEAD, và xây dựng hệ thống Live-Chat tinh vi tại Nemark sử dụng React, Next.js, Node.js và WebSocket. Ngoài phát triển web truyền thống, tôi thiết kế và phát triển hệ thống tự động hóa sử dụng AI — bao gồm bot marketing đa kênh, nền tảng e-commerce và website bất động sản như các dự án freelance.",
+    "home.about.p3": "Tôi cam kết với code sạch, testing toàn diện (Cypress, unit test) và CI/CD best practice. Tôi phát triển tốt trong môi trường nơi tôi có thể kiến trúc giải pháp end-to-end — từ thiết kế database đến phát triển API đến giao diện người dùng hoàn chỉnh.",
 
     // Home - Career Objective
     "home.career.title": "Mục Tiêu Nghề Nghiệp",
-    "home.career.p1": "Tôi hướng đến phát triển sự nghiệp như một Fullstack Developer với chuyên môn sâu trong hệ sinh thái React/Next.js. Mục tiêu là gia nhập một đội ngũ năng động nơi tôi có thể tận dụng kỹ năng xây dựng ứng dụng web hiệu suất cao, lấy người dùng làm trung tâm, đồng thời tiếp tục mở rộng chuyên môn trong công nghệ web hiện đại.",
-    "home.career.p2": "Tôi đặc biệt tập trung vào tối ưu trải nghiệm người dùng, hiệu suất ứng dụng và chất lượng code thông qua testing nghiêm ngặt bao gồm unit test và automation end-to-end. Ngoài ra, tôi tìm kiếm cơ hội để nâng cao kỹ năng phát triển backend, đóng góp vào kiến trúc và triển khai hệ thống server-side mạnh mẽ, có khả năng mở rộng.",
+    "home.career.p1": "Tôi hướng đến phát triển thành Senior Fullstack Developer với chuyên môn sâu về hệ sinh thái React/Next.js và kiến trúc backend Node.js. Mục tiêu là dẫn dắt phát triển sản phẩm end-to-end — từ thiết kế hệ thống và kiến trúc API đến frontend hiệu suất cao.",
+    "home.career.p2": "Tôi đặc biệt quan tâm đến xây dựng nền tảng tích hợp AI, sản phẩm SaaS và hệ thống tự động hóa. Tôi tìm kiếm cơ hội để kiến trúc giải pháp có khả năng mở rộng, kết hợp công nghệ web hiện đại với tự động hóa thông minh.",
 
     // Home - Technical Skills
     "home.skills.title": "Kỹ Năng Chuyên Môn",
@@ -192,7 +192,7 @@ const translations = {
     "contact.map.title": "<strong>Bản Đồ.</strong>",
     "contact.info.address": "<strong>Địa chỉ:</strong> Bình Nguyên, Kiến Xương, Thái Bình",
     "contact.info.phone": "<strong>SĐT:</strong> 0862497002",
-    "contact.info.job": "<strong>Nghề nghiệp:</strong> Lập trình viên Frontend (Junior)",
+    "contact.info.job": "<strong>Nghề nghiệp:</strong> Lập trình viên Fullstack",
     "contact.info.email": '<strong>E-mail:</strong> trantrungkien14092002@gmail.com',
     "contact.info.fb": '<strong>Facebook:</strong> <a href="https://www.facebook.com/kin2901" target="_blank">fb.com/kin2901</a>',
 
